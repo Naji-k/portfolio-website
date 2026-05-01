@@ -1,0 +1,54 @@
+{
+  "degrees": [
+    {
+      "id": "codam",
+      "degree": "Bachelor's in Software Engineering",
+      "institution": "Codam Coding College",
+      "location": "Amsterdam",
+      "startDate": "Sep 2022",
+      "endDate": "Sep 2025",
+      "description": "Part of the international 42 network. Project-based, peer-reviewed education focused on hands-on learning, code reviews, self-reliance, and testing culture."
+    },
+    {
+      "id": "ndu",
+      "degree": "Diploma in Mobile Application Development",
+      "institution": "Notre Dame University Louaize",
+      "location": "Beirut",
+      "startDate": "Feb 2017",
+      "endDate": "Sep 2018",
+      "description": "iOS development with Swift, Android development with Java, and hybrid mobile apps using PhoneGap (HTML5, CSS, JS)."
+    },
+    {
+      "id": "aleppo",
+      "degree": "Mechatronics Engineering",
+      "institution": "Electrical & Electronic University",
+      "location": "Aleppo",
+      "startDate": "Sep 2010",
+      "endDate": "May 2014",
+      "description": "Foundational studies in data structures, logic of code, and C++ fundamentals."
+    }
+  ],
+  "courses": [
+    {
+      "id": "mckinsey",
+      "title": "Forward Program",
+      "provider": "McKinsey",
+      "startDate": "Mar 2025",
+      "endDate": "Jun 2025"
+    },
+    {
+      "id": "udacity-ios",
+      "title": "iOS Developer Program",
+      "provider": "Udacity",
+      "startDate": "Jul 2023",
+      "endDate": "Feb 2024"
+    },
+    {
+      "id": "udacity-android",
+      "title": "Android Developer Track",
+      "provider": "Udacity",
+      "startDate": "Aug 2018",
+      "endDate": "Aug 2018"
+    }
+  ]
+}

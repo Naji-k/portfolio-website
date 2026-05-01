@@ -1,0 +1,149 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+
+const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+---
+
+<header
+  id="site-nav"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-50/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-transparent"
+>
+  <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- Logo / Name -->
+    <a
+      href="#about"
+      class="text-sm font-semibold tracking-widest uppercase text-gray-900 dark:text-white hover:text-accent-500 dark:hover:text-accent-300 transition-colors"
+    >
+      Marc Doe
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8">
+      {
+        navLinks.map(({ label, href }) => (
+          <li>
+            <a
+              href={href}
+              data-nav-link={href}
+              class="nav-link relative text-sm font-medium text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 py-1"
+            >
+              {label}
+              <span class="nav-indicator absolute bottom-0 left-0 h-px w-0 bg-accent-500 dark:bg-accent-300 transition-all duration-300" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <ThemeToggle />
+      <!-- Mobile hamburger -->
+      <button
+        id="mobile-menu-btn"
+        aria-label="Open navigation menu"
+        class="md:hidden p-2 rounded-md text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-950 px-6 py-4"
+  >
+    <ul class="flex flex-col gap-4">
+      {
+        navLinks.map(({ label, href }) => (
+          <li>
+            <a
+              href={href}
+              class="mobile-nav-link block text-sm font-medium text-gray-700 dark:text-slate-300 hover:text-accent-500 dark:hover:text-accent-300 transition-colors"
+            >
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn?.addEventListener("click", () =>
+    mobileMenu?.classList.toggle("hidden"),
+  );
+  document
+    .querySelectorAll(".mobile-nav-link")
+    .forEach((link) =>
+      link.addEventListener("click", () => mobileMenu?.classList.add("hidden")),
+    );
+
+  // Nav scroll shadow
+  const nav = document.getElementById("site-nav");
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.scrollY > 10) {
+        nav?.classList.add(
+          "border-gray-200",
+          "dark:border-slate-800/60",
+          "shadow-sm",
+        );
+      } else {
+        nav?.classList.remove(
+          "border-gray-200",
+          "dark:border-slate-800/60",
+          "shadow-sm",
+        );
+      }
+    },
+    { passive: true },
+  );
+
+  // Active section highlight
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("[data-nav-link]");
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => {
+            const isActive =
+              (link as HTMLAnchorElement).getAttribute("href") ===
+              `#${entry.target.id}`;
+            link.classList.toggle("!text-gray-900", isActive);
+            link.classList.toggle("dark:!text-white", isActive);
+            const indicator = link.querySelector(
+              ".nav-indicator",
+            ) as HTMLElement | null;
+            if (indicator) indicator.style.width = isActive ? "100%" : "0";
+          });
+        }
+      });
+    },
+    { threshold: 0.4, rootMargin: "-80px 0px -40% 0px" },
+  );
+  sections.forEach((s) => sectionObserver.observe(s));
+</script>

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "tomtom-se",
+    "title": "Software Engineer",
+    "company": "TomTom",
+    "location": "Amsterdam",
+    "startDate": "Oct 2024",
+    "endDate": "Sep 2025",
+    "highlights": [
+      "Developed and maintained the CES 2025 flagship demo, demonstrating live map customization using the TomTom software stack — successfully delivered for CES 2025 and continued for other company events.",
+      "Took full ownership of the project, collaborating closely with design, marketing, and key stakeholders to align technical delivery with company messaging and goals.",
+      "Built a dynamic web interface using Node.js and Flask; implemented a state machine to ensure a clear, reliable, and maintainable demo flow.",
+      "Integrated the Map-Maker tool via okHttp (Kotlin), enabling live map style customization during presentations.",
+      "Nominated for promotion to Software Engineer II, recognizing technical impact and cross-team leadership."
+    ]
+  },
+  {
+    "id": "tomtom-intern",
+    "title": "Software Engineer Intern",
+    "company": "TomTom",
+    "location": "Amsterdam",
+    "startDate": "Mar 2024",
+    "endDate": "Sep 2024",
+    "highlights": [
+      "Cut feedback triage time by 80% by building and deploying a company-wide Slack bot (Python, Slack-Bolt, OpenAI API) that auto-categorized feedback from 2,000+ users across three channels and generated Jira tickets.",
+      "Improved the AmiGO App by delivering new features and fixing bugs; applied Redux-Saga (React Native) for robust side-effect management."
+    ]
+  },
+  {
+    "id": "omnipharma-qa",
+    "title": "Quality Assurance Officer",
+    "company": "OMNIPHARMA",
+    "location": "Beirut",
+    "startDate": "Jun 2015",
+    "endDate": "Sep 2019",
+    "highlights": [
+      "Submitted daily reports, addressed safety deviations, and led corrective actions across production lines.",
+      "Developed an Excel automation tool using VBA that reduced data entry time by 70%."
+    ]
+  }
+]

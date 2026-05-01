@@ -1,0 +1,29 @@
+[
+  {
+    "id": "adstore",
+    "title": "ADStore",
+    "category": "personal",
+    "description": "A secondhand marketplace iOS app with real-time chat and listing functionality, powered by Firebase and GCP.",
+    "tech": ["Swift", "iOS", "Firebase", "GCP", "UIKit"],
+    "logo": null,
+    "hasDetail": true
+  },
+  {
+    "id": "pong-game",
+    "title": "Pong Game",
+    "category": "uni",
+    "description": "Backend for a multiplayer tournament game with real-time gameplay via WebSockets and secure authentication in a monorepo architecture.",
+    "tech": ["Fastify", "tRPC", "SQLite", "Drizzle ORM", "WebSockets", "JWT"],
+    "logo": null,
+    "hasDetail": true
+  },
+  {
+    "id": "webserver",
+    "title": "Webserver",
+    "category": "uni",
+    "description": "A non-blocking HTTP server in C++ handling GET, POST, and DELETE requests, serving static files and dynamic CGI content.",
+    "tech": ["C++", "HTTP", "CGI"],
+    "logo": null,
+    "hasDetail": true
+  }
+]

@@ -1,0 +1,130 @@
+---
+import projects from '../data/projects.json';
+
+const personal = projects.filter((p) => p.category === 'personal');
+const uni = projects.filter((p) => p.category === 'uni');
+---
+
+<section
+  id="projects"
+  class="py-24 px-6 max-w-5xl mx-auto"
+>
+  <!-- Section header -->
+  <div class="mb-12" data-animate>
+    <p class="text-sm font-mono text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Work</p>
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Projects</h2>
+  </div>
+
+  <!-- Tab buttons -->
+  <div class="flex gap-1 mb-10 border-b border-gray-200 dark:border-slate-800" data-animate>
+    <button
+      data-proj-tab="personal"
+      class="proj-tab-btn px-5 py-2.5 text-sm font-medium text-gray-500 dark:text-slate-400 border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+    >
+      Projects
+    </button>
+    <button
+      data-proj-tab="uni"
+      class="proj-tab-btn px-5 py-2.5 text-sm font-medium text-gray-500 dark:text-slate-400 border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+    >
+      University
+    </button>
+  </div>
+
+  <!-- Personal tab -->
+  <div id="proj-tab-personal" class="proj-tab-panel tab-panel" data-animate-stagger>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {personal.map((project) => (
+        <a
+          href={project.hasDetail ? `/projects/${project.id}` : undefined}
+          class={`group block bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-6 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
+        >
+          <!-- Logo / Icon placeholder -->
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-500 to-slate-700 flex items-center justify-center mb-4 text-white text-xs font-bold shrink-0">
+            {project.logo
+              ? <img src={project.logo} alt={project.title} class="w-6 h-6 object-contain" />
+              : project.title.slice(0, 2).toUpperCase()
+            }
+          </div>
+
+          <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors">
+            {project.title}
+            {project.hasDetail && (
+              <svg class="inline-block ml-1 w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+              </svg>
+            )}
+          </h3>
+
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-4">{project.description}</p>
+
+          <!-- Tech tags -->
+          <div class="flex flex-wrap gap-1.5">
+            {project.tech.map((tag) => (
+              <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- University tab -->
+  <div id="proj-tab-uni" class="proj-tab-panel tab-panel hidden" data-animate-stagger>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {uni.map((project) => (
+        <a
+          href={project.hasDetail ? `/projects/${project.id}` : undefined}
+          class={`group block bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-6 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
+        >
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-slate-700 to-slate-900 dark:from-slate-700 dark:to-slate-900 flex items-center justify-center mb-4 text-white text-xs font-bold shrink-0">
+            {project.logo
+              ? <img src={project.logo} alt={project.title} class="w-6 h-6 object-contain" />
+              : project.title.slice(0, 2).toUpperCase()
+            }
+          </div>
+
+          <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors">
+            {project.title}
+            {project.hasDetail && (
+              <svg class="inline-block ml-1 w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+              </svg>
+            )}
+          </h3>
+
+          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-4">{project.description}</p>
+
+          <div class="flex flex-wrap gap-1.5">
+            {project.tech.map((tag) => (
+              <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.proj-tab-btn');
+  const panels = document.querySelectorAll<HTMLElement>('.proj-tab-panel');
+  const ACTIVE_CLS = ['!text-gray-900', 'dark:!text-white', '!border-accent-500', 'dark:!border-accent-300'];
+
+  function activateTab(target: string) {
+    tabs.forEach((btn) => {
+      const isActive = btn.dataset.projTab === target;
+      ACTIVE_CLS.forEach((c) => btn.classList.toggle(c, isActive));
+    });
+    panels.forEach((panel) => {
+      panel.classList.toggle('hidden', panel.id !== `proj-tab-${target}`);
+    });
+  }
+
+  tabs.forEach((btn) => btn.addEventListener('click', () => activateTab(btn.dataset.projTab!)));
+  activateTab('personal');
+</script>
