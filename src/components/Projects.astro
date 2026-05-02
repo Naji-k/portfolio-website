@@ -11,7 +11,7 @@ const uni = projects.filter((p) => p.category === 'uni');
 >
   <!-- Section header -->
   <div class="mb-12" data-animate>
-    <p class="text-sm font-mono text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Work</p>
+    <!-- <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Work</p> -->
     <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Projects</h2>
   </div>
 
@@ -31,71 +31,77 @@ const uni = projects.filter((p) => p.category === 'uni');
     </button>
   </div>
 
-  <!-- Personal tab -->
+  <!-- Personal tab: featured card layout -->
   <div id="proj-tab-personal" class="proj-tab-panel tab-panel" data-animate-stagger>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="flex flex-col gap-5">
       {personal.map((project) => (
         <a
           href={project.hasDetail ? `/projects/${project.id}` : undefined}
-          class={`group block bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-6 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
+          class={`group block bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-8 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-0.5 hover:shadow-xl dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
         >
-          <!-- Logo / Icon placeholder -->
-          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-500 to-slate-700 flex items-center justify-center mb-4 text-white text-xs font-bold shrink-0">
-            {project.logo
-              ? <img src={project.logo} alt={project.title} class="w-6 h-6 object-contain" />
-              : project.title.slice(0, 2).toUpperCase()
-            }
-          </div>
+          <div class="flex gap-6 items-start">
+            <!-- Logo / Icon -->
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500 to-slate-700 flex items-center justify-center text-white text-sm font-bold shrink-0">
+              {project.logo
+                ? <img src={project.logo} alt={project.title} class="w-7 h-7 object-contain" />
+                : project.title.slice(0, 2).toUpperCase()
+              }
+            </div>
 
-          <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors">
-            {project.title}
-            {project.hasDetail && (
-              <svg class="inline-block ml-1 w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-              </svg>
-            )}
-          </h3>
-
-          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-4">{project.description}</p>
-
-          <!-- Tech tags -->
-          <div class="flex flex-wrap gap-1.5">
-            {project.tech.map((tag) => (
-              <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700">
-                {tag}
-              </span>
-            ))}
+            <div class="flex-1 min-w-0">
+              <p class="text-xs font-medium text-accent-500 dark:text-accent-300 uppercase tracking-wider mb-1">
+                Personal Project
+              </p>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors flex items-center gap-1.5">
+                {project.title}
+                {project.hasDetail && (
+                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                  </svg>
+                )}
+              </h3>
+              <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed dark:leading-[1.75] mb-5 max-w-[65ch]" style="text-wrap: pretty">
+                {project.description}
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                {project.tech.map((tag) => (
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </a>
       ))}
     </div>
   </div>
 
-  <!-- University tab -->
+  <!-- University tab: 2-col grid -->
   <div id="proj-tab-uni" class="proj-tab-panel tab-panel hidden" data-animate-stagger>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="grid sm:grid-cols-2 gap-5">
       {uni.map((project) => (
         <a
           href={project.hasDetail ? `/projects/${project.id}` : undefined}
           class={`group block bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-6 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
         >
-          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-slate-700 to-slate-900 dark:from-slate-700 dark:to-slate-900 flex items-center justify-center mb-4 text-white text-xs font-bold shrink-0">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center mb-4 text-white text-xs font-bold shrink-0">
             {project.logo
               ? <img src={project.logo} alt={project.title} class="w-6 h-6 object-contain" />
               : project.title.slice(0, 2).toUpperCase()
             }
           </div>
 
-          <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors">
+          <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors flex items-center gap-1">
             {project.title}
             {project.hasDetail && (
-              <svg class="inline-block ml-1 w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <svg class="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
               </svg>
             )}
           </h3>
 
-          <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-4">{project.description}</p>
+          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed dark:leading-[1.75] mb-4" style="text-wrap: pretty">{project.description}</p>
 
           <div class="flex flex-wrap gap-1.5">
             {project.tech.map((tag) => (

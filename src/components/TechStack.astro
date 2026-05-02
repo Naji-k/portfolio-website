@@ -1,0 +1,31 @@
+---
+import profile from '../data/profile.json';
+
+const entries = Object.entries(profile.skills);
+---
+
+<section
+  id="stack"
+  class="py-24 px-6 max-w-5xl mx-auto"
+>
+  <div class="mb-10" data-animate>
+    <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Skills</p>
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Tech Stack</h2>
+  </div>
+
+  <div
+    class="bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl overflow-hidden"
+    data-animate-stagger
+  >
+    {entries.map(([category, items], i) => (
+      <div class={`flex flex-wrap items-baseline gap-x-8 gap-y-1.5 px-6 py-5 ${i < entries.length - 1 ? 'border-b border-gray-100 dark:border-slate-800' : ''}`}>
+        <span class="text-[10px] font-semibold uppercase tracking-[0.14em] text-gray-400 dark:text-slate-500 shrink-0 w-28">
+          {category}
+        </span>
+        <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed flex-1 min-w-[200px]">
+          {(items as string[]).join(' · ')}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>

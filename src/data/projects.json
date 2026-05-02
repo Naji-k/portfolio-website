@@ -1,5 +1,14 @@
 [
   {
+    "id": "matchBeforeApply",
+    "title": "Match Before Apply",
+    "category": "personal",
+    "description": "A product I built to help candidates understand how well their CV matches a job description before applying. It analyzes CV-job fit, generates a match score, and gives ATS-focused improvement suggestions through a multi-agent AI workflow.",
+    "tech": ["FastAPI", "Custom AI Agents", "SvelteKit", "JWT", "GCP", "UIKit"],
+    "logo": null,
+    "hasDetail": false
+  },
+  {
     "id": "adstore",
     "title": "ADStore",
     "category": "personal",

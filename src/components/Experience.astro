@@ -9,7 +9,7 @@ import education from '../data/education.json';
 >
   <!-- Section header -->
   <div class="mb-12" data-animate>
-    <p class="text-sm font-mono text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Background</p>
+    <!-- <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Background</p> -->
     <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Experience & Education</h2>
   </div>
 
@@ -52,7 +52,7 @@ import education from '../data/education.json';
           </div>
           <ul class="space-y-2">
             {job.highlights.map((h) => (
-              <li class="flex gap-2 text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+              <li class="flex gap-2 text-base text-gray-600 dark:text-slate-400 leading-relaxed dark:leading-[1.75]">
                 <span class="mt-1.5 w-1 h-1 rounded-full bg-accent-500 dark:bg-accent-300 shrink-0"></span>
                 <span set:html={h}></span>
               </li>
@@ -81,7 +81,7 @@ import education from '../data/education.json';
               </span>
             </div>
             {deg.description && (
-              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{deg.description}</p>
+              <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed dark:leading-[1.75]" style="text-wrap: pretty">{deg.description}</p>
             )}
           </div>
         ))}

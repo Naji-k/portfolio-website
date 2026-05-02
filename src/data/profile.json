@@ -1,16 +1,42 @@
 {
   "name": "Naji Kanounji",
   "title": "Software Engineer",
+  "tagline": "I build backend systems, AI-powered workflows, and product-focused tools.",
   "location": "Amsterdam, Netherlands",
   "email": "email@gmail.com",
   "github": "https://github.com/naji-k",
   "linkedin": "https://linkedin.com/",
   "photo": "/images/profile.jpg",
-  "summary": "Software engineer with experience in backend development, API integrations, and automation tools. Obsessed with finding better ways to automate workflows and improve efficiency. Skilled in building scalable, user-focused solutions through hands-on development in Python and Kotlin and RESTful APIs, while collaborating closely with product and engineering teams. Passionate about using technology to simplify complex processes and drive product excellence.",
+  "summary": "I’m a software engineer building backend systems, AI-powered workflows, and product-focused tools. At TomTom, I built an AI-powered feedback triage system, used across slack channels by 2,000+ users and reducing manual triage work by 80%. I also contributed to demo systems showcased at CES 2025.",
   "skills": {
-    "Languages": ["Python", "C", "C++", "Swift", "Kotlin", "Java", "TypeScript"],
-    "Frameworks": ["React Native", "Redux-Saga", "UIKit", "Core Data", "Flask", "Slack-Bolt", "Fastify"],
-    "DevOps & DBs": ["GCP", "AWS", "Docker", "PostgreSQL", "SQLite", "GitHub Actions", "REST APIs", "OpenAI API"],
+    "Languages": [
+      "Python",
+      "C",
+      "C++",
+      "Swift",
+      "Kotlin",
+      "Java",
+      "TypeScript"
+    ],
+    "Frameworks": [
+      "React Native",
+      "Redux-Saga",
+      "UIKit",
+      "Core Data",
+      "Flask",
+      "Slack-Bolt",
+      "Fastify"
+    ],
+    "DevOps & DBs": [
+      "GCP",
+      "AWS",
+      "Docker",
+      "PostgreSQL",
+      "SQLite",
+      "GitHub Actions",
+      "REST APIs",
+      "OpenAI API"
+    ],
     "Architecture": ["MVC", "MVVM", "tRPC", "WebSockets"]
   }
 }
