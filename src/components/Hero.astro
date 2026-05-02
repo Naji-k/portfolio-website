@@ -17,13 +17,13 @@ const iconPaths: Record<string, string> = {
     '<path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.355a3.375 3.375 0 0 1-3 0M12 3c-4.418 0-8 3.582-8 8 0 2.664 1.302 5.02 3.312 6.488.358.255.688.56.688.888V18a.75.75 0 0 0 .75.75h6A.75.75 0 0 0 15 18v-.624c0-.328.33-.633.688-.888C17.698 15.02 19 12.664 19 10c0-4.418-3.582-8-7-8z" />',
 };
 ---
+<div class="absolute inset-0 bg-gradient-to-br from-accent-500/10 to-slate-700/10 pointer-events-none" aria-hidden="true" />
 
 <section
-  id="about"
   class="min-h-screen flex flex-col justify-center pt-24 pb-16 px-6 max-w-5xl mx-auto"
 >
+  <!-- Zone 1: Identity -->
   <div class="grid md:grid-cols-[1fr_auto] gap-12 items-center">
-    <!-- Text content -->
     <div>
       <p
         class="text-xs font-medium text-accent-500 dark:text-accent-300 mb-4 tracking-widest uppercase"
@@ -55,7 +55,7 @@ const iconPaths: Record<string, string> = {
       </p>
 
       <!-- Social links -->
-      <div class="flex flex-wrap gap-3 mb-8" data-animate>
+      <div class="flex flex-wrap gap-3" data-animate>
         <a
           href={`mailto:${profile.email}`}
           class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent-500 text-white text-sm font-medium hover:bg-accent-900 dark:hover:bg-accent-300 dark:hover:text-slate-900 transition-colors duration-200"
@@ -101,13 +101,6 @@ const iconPaths: Record<string, string> = {
           LinkedIn
         </a>
       </div>
-
-      <!-- Skills: row layout -->
-      <div
-        class="space-y-2.5 border-t border-gray-200 dark:border-slate-800 pt-6"
-        data-animate
-      >
-      </div>
     </div>
 
     <!-- Profile photo -->
@@ -129,16 +122,17 @@ const iconPaths: Record<string, string> = {
       </div>
     </div>
   </div>
-  <!-- Specialties -->
-  <div class="mt-16 flex justify-center" data-animate>
-    <ul
-      class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10"
-      data-animate-stagger
-    >
+
+  <!-- Zone 2: Specialty cards -->
+  <div
+    class="border-t border-gray-200 dark:border-slate-800 pt-10 mt-10"
+    data-animate-stagger
+  >
+    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       {
         profile.specialties.map((s) => (
-          <li class="flex flex-col gap-2 rounded-xl border border-gray-800 bg-gray-950 dark:bg-gray-950 p-4 transition-colors hover:border-gray-700">
-            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-accent-500/10 dark:bg-accent-300/10 shrink-0">
+          <li class="bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-5 hover:border-accent-500 dark:hover:border-accent-300 transition-colors duration-300">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-accent-500/10 dark:bg-accent-300/10 mb-3">
               <svg
                 class="w-4 h-4 text-accent-500 dark:text-accent-300"
                 fill="none"
@@ -148,26 +142,47 @@ const iconPaths: Record<string, string> = {
                 set:html={iconPaths[s.icon]}
               />
             </span>
-            <p class="text-sm font-semibold text-gray-100 dark:text-slate-100 mt-1">
+            <p class="text-sm font-semibold text-gray-900 dark:text-white mb-1">
               {s.title}
             </p>
-            <p class="text-xs text-gray-500 dark:text-slate-500 leading-relaxed">
+            <p class="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">
               {s.description}
             </p>
-            {s.examples && (
-              <p class="text-[10px] text-accent-400/60 dark:text-accent-300/50 mt-auto pt-2">
-                {s.examples}
-              </p>
-            )}
           </li>
         ))
       }
     </ul>
   </div>
-  <!-- Scroll hint -->
-  <div class="mt-16 flex justify-center" data-animate>
+
+  <!-- Zone 3: Skills stack -->
+  <!-- <div
+    class="border-t border-gray-200 dark:border-slate-800 pt-8 mt-8"
+    data-animate
+  >
+    <div class="space-y-2.5">
+      {
+        Object.entries(profile.skills).map(([category, items]) => (
+          <div class="flex gap-5 items-start">
+            <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 w-24 pt-0.5 shrink-0">
+              {category}
+            </span>
+            <div class="flex flex-wrap gap-1.5">
+              {(items as string[]).map((skill) => (
+                <span class="text-xs px-2 py-0.5 rounded bg-gray-200 dark:bg-slate-800 text-gray-700 dark:text-slate-300">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div> -->
+
+  <!-- Zone 4: Scroll hint -->
+  <div class="mt-10 flex justify-center" data-animate>
     <a
-      href="#experience"
+      href="#about"
       class="flex flex-col items-center gap-2 text-gray-400 dark:text-slate-600 hover:text-accent-500 dark:hover:text-accent-300 transition-colors text-xs"
     >
       <span>Scroll</span>
@@ -178,8 +193,10 @@ const iconPaths: Record<string, string> = {
         stroke="currentColor"
         stroke-width="2"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"
-        ></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19 9l-7 7-7-7"></path>
       </svg>
     </a>
   </div>

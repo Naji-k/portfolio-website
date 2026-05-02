@@ -17,12 +17,12 @@
     {
       "icon": "sparkles",
       "title": "LLM product engineering",
-      "description": "Turning language models into real features — classification, extraction, scoring, and structured output inside production software."
+      "description": "Turning language models into real features: classification, extraction, scoring, and structured output inside production software."
     },
     {
       "icon": "lightbulb",
       "title": "Product-minded development",
-      "description": "From internal tools at TomTom to MatchBeforeApply — bridging the gap between engineering and real user problems."
+      "description": "From internal tools at TomTom to MatchBeforeApply, bridging the gap between engineering and real user problems."
     }
   ],
   "skills": {

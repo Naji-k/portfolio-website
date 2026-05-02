@@ -8,7 +8,9 @@
   --color-accent-500: #27268a;
   --color-accent-900: #151461;
   --color-accent-300: #818cf8;
-  --color-accent-200: #a5b4fc;
+  --color-accent-200: #a5b4fc
+
+  --color-bg: #f8f9fa;
 }
 
 /* ── Base typography ── */
@@ -16,11 +18,13 @@ body {
   font-optical-sizing: auto;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
+  /* background-color: beige; */
 }
 
 /* Light text on dark reads as lighter — compensate with slight letter-spacing */
 .dark body {
   letter-spacing: 0.01em;
+  /* background-color: rgb(9, 9, 54); */
 }
 
 h1, h2, h3, h4 {
@@ -46,6 +50,19 @@ html {
   margin-left: 3px;
   vertical-align: middle;
   animation: blink 1.1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink {
+    animation: none;
+    opacity: 1;
+  }
+  [data-animate],
+  [data-animate-stagger] > * {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* ── Scroll-reveal animations ── */
