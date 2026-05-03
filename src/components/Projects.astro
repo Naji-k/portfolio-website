@@ -12,20 +12,20 @@ const uni = projects.filter((p) => p.category === 'uni');
   <!-- Section header -->
   <div class="mb-12" data-animate>
     <!-- <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Work</p> -->
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Projects</h2>
+    <h2 class="text-3xl font-bold text-fg">Projects</h2>
   </div>
 
   <!-- Tab buttons -->
-  <div class="flex gap-1 mb-10 border-b border-gray-200 dark:border-slate-800" data-animate>
+  <div class="flex gap-1 mb-10 border-b border-wire" data-animate>
     <button
       data-proj-tab="personal"
-      class="proj-tab-btn px-5 py-2.5 text-sm font-medium text-gray-500 dark:text-slate-400 border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+      class="proj-tab-btn px-5 py-2.5 text-sm font-medium text-fg-soft border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-fg"
     >
       Projects
     </button>
     <button
       data-proj-tab="uni"
-      class="proj-tab-btn px-5 py-2.5 text-sm font-medium text-gray-500 dark:text-slate-400 border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+      class="proj-tab-btn px-5 py-2.5 text-sm font-medium text-fg-soft border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-fg"
     >
       University
     </button>
@@ -37,7 +37,7 @@ const uni = projects.filter((p) => p.category === 'uni');
       {personal.map((project) => (
         <a
           href={project.hasDetail ? `/projects/${project.id}` : undefined}
-          class={`group block bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-8 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-0.5 hover:shadow-xl dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
+          class={`group block bg-panel border border-wire rounded-xl p-8 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-0.5 hover:shadow-xl dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
         >
           <div class="flex gap-6 items-start">
             <!-- Logo / Icon -->
@@ -52,7 +52,7 @@ const uni = projects.filter((p) => p.category === 'uni');
               <p class="text-xs font-medium text-accent-500 dark:text-accent-300 uppercase tracking-wider mb-1">
                 Personal Project
               </p>
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors flex items-center gap-1.5">
+              <h3 class="text-xl font-semibold text-fg mb-3 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors flex items-center gap-1.5">
                 {project.title}
                 {project.hasDetail && (
                   <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -60,12 +60,12 @@ const uni = projects.filter((p) => p.category === 'uni');
                   </svg>
                 )}
               </h3>
-              <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed dark:leading-[1.75] mb-5 max-w-[65ch]" style="text-wrap: pretty">
+              <p class="text-base text-fg-soft leading-relaxed dark:leading-[1.75] mb-5 max-w-[65ch]" style="text-wrap: pretty">
                 {project.description}
               </p>
               <div class="flex flex-wrap gap-1.5">
                 {project.tech.map((tag) => (
-                  <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700">
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-wire text-fg-mid border border-wire">
                     {tag}
                   </span>
                 ))}
@@ -83,7 +83,7 @@ const uni = projects.filter((p) => p.category === 'uni');
       {uni.map((project) => (
         <a
           href={project.hasDetail ? `/projects/${project.id}` : undefined}
-          class={`group block bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-6 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
+          class={`group block bg-panel border border-wire rounded-xl p-6 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
         >
           <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center mb-4 text-white text-xs font-bold shrink-0">
             {project.logo
@@ -92,7 +92,7 @@ const uni = projects.filter((p) => p.category === 'uni');
             }
           </div>
 
-          <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors flex items-center gap-1">
+          <h3 class="text-base font-semibold text-fg mb-2 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors flex items-center gap-1">
             {project.title}
             {project.hasDetail && (
               <svg class="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -101,11 +101,11 @@ const uni = projects.filter((p) => p.category === 'uni');
             )}
           </h3>
 
-          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed dark:leading-[1.75] mb-4" style="text-wrap: pretty">{project.description}</p>
+          <p class="text-base text-fg-soft leading-relaxed dark:leading-[1.75] mb-4" style="text-wrap: pretty">{project.description}</p>
 
           <div class="flex flex-wrap gap-1.5">
             {project.tech.map((tag) => (
-              <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-wire text-fg-mid border border-wire">
                 {tag}
               </span>
             ))}
@@ -119,7 +119,7 @@ const uni = projects.filter((p) => p.category === 'uni');
 <script>
   const tabs = document.querySelectorAll<HTMLButtonElement>('.proj-tab-btn');
   const panels = document.querySelectorAll<HTMLElement>('.proj-tab-panel');
-  const ACTIVE_CLS = ['!text-gray-900', 'dark:!text-white', '!border-accent-500', 'dark:!border-accent-300'];
+  const ACTIVE_CLS = ['!text-fg', '!border-accent-500', 'dark:!border-accent-300'];
 
   function activateTab(target: string) {
     tabs.forEach((btn) => {

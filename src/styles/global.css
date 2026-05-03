@@ -4,13 +4,36 @@
 @theme {
   --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
 
-  /* Custom accent palette */
+  /* Accent palette (ink navy / pale indigo) */
   --color-accent-500: #27268a;
   --color-accent-900: #151461;
   --color-accent-300: #818cf8;
-  --color-accent-200: #a5b4fc
+  --color-accent-200: #a5b4fc;
 
-  --color-bg: #f8f9fa;
+  /* Neutral semantic tokens — light mode defaults */
+  --color-base:      #f9fafb;   /* page background */
+  --color-panel:     #ffffff;   /* card / surface background */
+  --color-wire:      #e5e7eb;   /* default border */
+  --color-wire-soft: #d1d5db;   /* ghost button border */
+  --color-fg:        #111827;   /* primary text */
+  --color-fg-soft:   #4b5563;   /* body / description text */
+  --color-fg-muted:  #9ca3af;   /* meta / date / muted text */
+  --color-fg-mid:    #6b7280;   /* secondary labels */
+
+  /* Typography */
+  --text-display: clamp(2.75rem, 6vw + 0.5rem, 4.75rem);
+}
+
+/* Dark mode token overrides — all neutrals flip here, nowhere else */
+.dark {
+  --color-base:      #020617;
+  --color-panel:     rgb(15 23 42 / 0.6);
+  --color-wire:      #1e293b;
+  --color-wire-soft: #334155;
+  --color-fg:        #ffffff;
+  --color-fg-soft:   #94a3b8;
+  --color-fg-muted:  #64748b;
+  --color-fg-mid:    #cbd5e1;
 }
 
 /* ── Base typography ── */

@@ -10,20 +10,20 @@ import education from '../data/education.json';
   <!-- Section header -->
   <div class="mb-12" data-animate>
     <!-- <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Background</p> -->
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Experience & Education</h2>
+    <h2 class="text-3xl font-bold text-fg">Experience & Education</h2>
   </div>
 
   <!-- Tab buttons -->
-  <div class="flex gap-1 mb-10 border-b border-gray-200 dark:border-slate-800" data-animate>
+  <div class="flex gap-1 mb-10 border-b border-wire" data-animate>
     <button
       data-exp-tab="work"
-      class="exp-tab-btn px-5 py-2.5 text-sm font-medium text-gray-500 dark:text-slate-400 border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+      class="exp-tab-btn px-5 py-2.5 text-sm font-medium text-fg-soft border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-fg"
     >
       Work Experience
     </button>
     <button
       data-exp-tab="education"
-      class="exp-tab-btn px-5 py-2.5 text-sm font-medium text-gray-500 dark:text-slate-400 border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+      class="exp-tab-btn px-5 py-2.5 text-sm font-medium text-fg-soft border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-fg"
     >
       Education
     </button>
@@ -35,24 +35,24 @@ import education from '../data/education.json';
       <div class="relative pl-8 pb-12 last:pb-0">
         <!-- Timeline line -->
         {i < experience.length - 1 && (
-          <div class="absolute left-[11px] top-6 bottom-0 w-px bg-gray-200 dark:bg-slate-800"></div>
+          <div class="absolute left-[11px] top-6 bottom-0 w-px bg-wire"></div>
         )}
         <!-- Timeline dot -->
-        <div class="absolute left-0 top-1.5 w-[22px] h-[22px] rounded-full bg-accent-500 dark:bg-accent-500 border-[3px] border-gray-50 dark:border-slate-950 shadow"></div>
+        <div class="absolute left-0 top-1.5 w-[22px] h-[22px] rounded-full bg-accent-500 border-[3px] border-base shadow"></div>
 
-        <div class="bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-6 hover:border-accent-500 dark:hover:border-accent-300 transition-colors duration-300">
+        <div class="bg-panel border border-wire rounded-xl p-6 hover:border-accent-500 dark:hover:border-accent-300 transition-colors duration-300">
           <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
             <div>
-              <h3 class="text-base font-semibold text-gray-900 dark:text-white">{job.title}</h3>
+              <h3 class="text-base font-semibold text-fg">{job.title}</h3>
               <p class="text-sm text-accent-500 dark:text-accent-300 font-medium">{job.company} · {job.location}</p>
             </div>
-            <span class="text-xs text-gray-400 dark:text-slate-500 font-mono whitespace-nowrap">
+            <span class="text-xs text-fg-muted font-mono whitespace-nowrap">
               {job.startDate} — {job.endDate}
             </span>
           </div>
           <ul class="space-y-2">
             {job.highlights.map((h) => (
-              <li class="flex gap-2 text-base text-gray-600 dark:text-slate-400 leading-relaxed dark:leading-[1.75]">
+              <li class="flex gap-2 text-base text-fg-soft leading-relaxed dark:leading-[1.75]">
                 <span class="mt-1.5 w-1 h-1 rounded-full bg-accent-500 dark:bg-accent-300 shrink-0"></span>
                 <span set:html={h}></span>
               </li>
@@ -67,21 +67,21 @@ import education from '../data/education.json';
   <div id="exp-tab-education" class="exp-tab-panel tab-panel hidden" data-animate-stagger>
     <!-- Degrees -->
     <div class="mb-10">
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-6">Degrees</h3>
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-fg-muted mb-6">Degrees</h3>
       <div class="space-y-4">
         {education.degrees.map((deg) => (
-          <div class="bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-800 rounded-xl p-6 hover:border-accent-500 dark:hover:border-accent-300 transition-colors duration-300">
+          <div class="bg-panel border border-wire rounded-xl p-6 hover:border-accent-500 dark:hover:border-accent-300 transition-colors duration-300">
             <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
               <div>
-                <h4 class="text-base font-semibold text-gray-900 dark:text-white">{deg.degree}</h4>
+                <h4 class="text-base font-semibold text-fg">{deg.degree}</h4>
                 <p class="text-sm text-accent-500 dark:text-accent-300 font-medium">{deg.institution} · {deg.location}</p>
               </div>
-              <span class="text-xs text-gray-400 dark:text-slate-500 font-mono whitespace-nowrap">
+              <span class="text-xs text-fg-muted font-mono whitespace-nowrap">
                 {deg.startDate} — {deg.endDate}
               </span>
             </div>
             {deg.description && (
-              <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed dark:leading-[1.75]" style="text-wrap: pretty">{deg.description}</p>
+              <p class="text-base text-fg-soft leading-relaxed dark:leading-[1.75]" style="text-wrap: pretty">{deg.description}</p>
             )}
           </div>
         ))}
@@ -90,15 +90,15 @@ import education from '../data/education.json';
 
     <!-- Courses -->
     <div>
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-4">Courses & Certificates</h3>
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-fg-muted mb-4">Courses & Certificates</h3>
       <div class="space-y-2">
         {education.courses.map((course) => (
-          <div class="flex flex-wrap items-center justify-between gap-2 px-4 py-3 bg-white dark:bg-slate-900/40 border border-gray-200 dark:border-slate-800 rounded-lg">
+          <div class="flex flex-wrap items-center justify-between gap-2 px-4 py-3 bg-panel border border-wire rounded-lg">
             <div>
-              <span class="text-sm font-medium text-gray-900 dark:text-white">{course.title}</span>
-              <span class="ml-2 text-xs text-gray-500 dark:text-slate-500">{course.provider}</span>
+              <span class="text-sm font-medium text-fg">{course.title}</span>
+              <span class="ml-2 text-xs text-fg-soft">{course.provider}</span>
             </div>
-            <span class="text-xs text-gray-400 dark:text-slate-600 font-mono">
+            <span class="text-xs text-fg-muted font-mono">
               {course.startDate === course.endDate ? course.startDate : `${course.startDate} — ${course.endDate}`}
             </span>
           </div>
@@ -112,7 +112,7 @@ import education from '../data/education.json';
   const tabs = document.querySelectorAll<HTMLButtonElement>('.exp-tab-btn');
   const panels = document.querySelectorAll<HTMLElement>('.exp-tab-panel');
 
-  const ACTIVE_CLS = ['!text-gray-900', 'dark:!text-white', '!border-accent-500', 'dark:!border-accent-300'];
+  const ACTIVE_CLS = ['!text-fg', '!border-accent-500', 'dark:!border-accent-300'];
 
   function activateTab(target: string) {
     tabs.forEach((btn) => {
