@@ -1,124 +1,175 @@
 ---
-import projects from '../data/projects.json';
+import projects from "../data/projects.json";
 
-const personal = projects.filter((p) => p.category === 'personal');
-const uni = projects.filter((p) => p.category === 'uni');
+const personal = projects.filter((p) => p.category === "personal");
+const uni = projects.filter((p) => p.category === "uni");
 ---
 
-<section
-  id="projects"
-  class="py-24 px-6 max-w-5xl mx-auto"
->
+<section id="projects" class="mx-auto max-w-5xl px-6 py-24">
   <!-- Section header -->
   <div class="mb-12" data-animate>
     <!-- <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Work</p> -->
-    <h2 class="text-3xl font-bold text-fg">Projects</h2>
+    <h2 class="text-fg text-3xl font-bold">Projects</h2>
   </div>
 
   <!-- Tab buttons -->
-  <div class="flex gap-1 mb-10 border-b border-wire" data-animate>
+  <div class="border-wire mb-10 flex gap-1 border-b" data-animate>
     <button
       data-proj-tab="personal"
-      class="proj-tab-btn px-5 py-2.5 text-sm font-medium text-fg-soft border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-fg"
+      class="proj-tab-btn text-fg-soft hover:text-fg -mb-px border-b-2 border-transparent px-5 py-2.5 text-sm font-medium transition-colors duration-200"
     >
       Projects
     </button>
     <button
       data-proj-tab="uni"
-      class="proj-tab-btn px-5 py-2.5 text-sm font-medium text-fg-soft border-b-2 border-transparent -mb-px transition-colors duration-200 hover:text-fg"
+      class="proj-tab-btn text-fg-soft hover:text-fg -mb-px border-b-2 border-transparent px-5 py-2.5 text-sm font-medium transition-colors duration-200"
     >
       University
     </button>
   </div>
 
   <!-- Personal tab: featured card layout -->
-  <div id="proj-tab-personal" class="proj-tab-panel tab-panel" data-animate-stagger>
+  <div
+    id="proj-tab-personal"
+    class="proj-tab-panel tab-panel"
+    data-animate-stagger
+  >
     <div class="flex flex-col gap-5">
-      {personal.map((project) => (
-        <a
-          href={project.hasDetail ? `/projects/${project.id}` : undefined}
-          class={`group block bg-panel border border-wire rounded-xl p-8 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-0.5 hover:shadow-xl dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
-        >
-          <div class="flex gap-6 items-start">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500 to-slate-700 flex items-center justify-center text-white text-sm font-bold shrink-0">
-              {project.logo
-                ? <img src={project.logo} alt={project.title} class="w-7 h-7 object-contain" />
-                : project.title.slice(0, 2).toUpperCase()
-              }
-            </div>
-
-            <div class="flex-1 min-w-0">
-              <p class="text-xs font-medium text-accent-500 dark:text-accent-300 uppercase tracking-wider mb-1">
-                Personal Project
-              </p>
-              <h3 class="text-xl font-semibold text-fg mb-3 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors flex items-center gap-1.5">
-                {project.title}
-                {project.hasDetail && (
-                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-                  </svg>
+      {
+        personal.map((project) => (
+          <a
+            href={project.hasDetail ? `/projects/${project.id}` : undefined}
+            class={`group bg-panel border-wire block rounded-xl border p-8 ${project.hasDetail ? "hover:border-accent-500 dark:hover:border-accent-300 dark:hover:shadow-accent-500/10 cursor-pointer hover:-translate-y-0.5 hover:shadow-xl" : "cursor-default"} transition-all duration-300`}
+          >
+            <div class="flex items-start gap-6">
+              <div class="from-accent-500 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br to-slate-700 text-sm font-bold text-white">
+                {project.logo ? (
+                  <img
+                    src={project.logo}
+                    alt={project.title}
+                    class="h-7 w-7 object-contain"
+                  />
+                ) : (
+                  project.title.slice(0, 2).toUpperCase()
                 )}
-              </h3>
-              <p class="text-base text-fg-soft leading-relaxed dark:leading-[1.75] mb-5 max-w-[65ch]" style="text-wrap: pretty">
-                {project.description}
-              </p>
-              <div class="flex flex-wrap gap-1.5">
-                {project.tech.map((tag) => (
-                  <span class="text-xs px-2 py-0.5 rounded-full bg-wire text-fg-mid border border-wire">
-                    {tag}
-                  </span>
-                ))}
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <p class="text-accent-500 dark:text-accent-300 mb-1 text-xs font-medium tracking-wider uppercase">
+                  Personal Project
+                </p>
+                <h3 class="text-fg group-hover:text-accent-500 dark:group-hover:text-accent-300 mb-3 flex items-center gap-1.5 text-xl font-semibold transition-colors">
+                  {project.title}
+                  {project.hasDetail && (
+                    <svg
+                      class="h-4 w-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  )}
+                </h3>
+                <p
+                  class="text-fg-soft mb-5 max-w-[65ch] text-base leading-relaxed dark:leading-[1.75]"
+                  style="text-wrap: pretty"
+                >
+                  {project.description}
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  {project.tech.map((tag) => (
+                    <span class="bg-wire text-fg-mid border-wire rounded-full border px-2 py-0.5 text-xs">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-      ))}
+          </a>
+        ))
+      }
     </div>
   </div>
 
   <!-- University tab: 2-col grid -->
-  <div id="proj-tab-uni" class="proj-tab-panel tab-panel hidden" data-animate-stagger>
-    <div class="grid sm:grid-cols-2 gap-5">
-      {uni.map((project) => (
-        <a
-          href={project.hasDetail ? `/projects/${project.id}` : undefined}
-          class={`group block bg-panel border border-wire rounded-xl p-6 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
-        >
-          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center mb-4 text-white text-xs font-bold shrink-0">
-            {project.logo
-              ? <img src={project.logo} alt={project.title} class="w-6 h-6 object-contain" />
-              : project.title.slice(0, 2).toUpperCase()
-            }
-          </div>
+  <div
+    id="proj-tab-uni"
+    class="proj-tab-panel tab-panel hidden"
+    data-animate-stagger
+  >
+    <div class="grid gap-5 sm:grid-cols-2">
+      {
+        uni.map((project) => (
+          <a
+            href={project.hasDetail ? `/projects/${project.id}` : undefined}
+            class={`group bg-panel border-wire block rounded-xl border p-6 ${project.hasDetail ? "hover:border-accent-500 dark:hover:border-accent-300 dark:hover:shadow-accent-500/10 cursor-pointer hover:-translate-y-1 hover:shadow-lg" : "cursor-default"} transition-all duration-300`}
+          >
+            <div class="mb-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-slate-600 to-slate-800 text-xs font-bold text-white">
+              {project.logo ? (
+                <img
+                  src={project.logo}
+                  alt={project.title}
+                  class="h-6 w-6 object-contain"
+                />
+              ) : (
+                project.title.slice(0, 2).toUpperCase()
+              )}
+            </div>
 
-          <h3 class="text-base font-semibold text-fg mb-2 group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors flex items-center gap-1">
-            {project.title}
-            {project.hasDetail && (
-              <svg class="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-              </svg>
-            )}
-          </h3>
+            <h3 class="text-fg group-hover:text-accent-500 dark:group-hover:text-accent-300 mb-2 flex items-center gap-1 text-base font-semibold transition-colors">
+              {project.title}
+              {project.hasDetail && (
+                <svg
+                  class="h-3 w-3 shrink-0 opacity-0 transition-opacity group-hover:opacity-100"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              )}
+            </h3>
 
-          <p class="text-base text-fg-soft leading-relaxed dark:leading-[1.75] mb-4" style="text-wrap: pretty">{project.description}</p>
+            <p
+              class="text-fg-soft mb-4 text-base leading-relaxed dark:leading-[1.75]"
+              style="text-wrap: pretty"
+            >
+              {project.description}
+            </p>
 
-          <div class="flex flex-wrap gap-1.5">
-            {project.tech.map((tag) => (
-              <span class="text-xs px-2 py-0.5 rounded-full bg-wire text-fg-mid border border-wire">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </a>
-      ))}
+            <div class="flex flex-wrap gap-1.5">
+              {project.tech.map((tag) => (
+                <span class="bg-wire text-fg-mid border-wire rounded-full border px-2 py-0.5 text-xs">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </a>
+        ))
+      }
     </div>
   </div>
 </section>
 
 <script>
-  const tabs = document.querySelectorAll<HTMLButtonElement>('.proj-tab-btn');
-  const panels = document.querySelectorAll<HTMLElement>('.proj-tab-panel');
-  const ACTIVE_CLS = ['!text-fg', '!border-accent-500', 'dark:!border-accent-300'];
+  const tabs = document.querySelectorAll<HTMLButtonElement>(".proj-tab-btn");
+  const panels = document.querySelectorAll<HTMLElement>(".proj-tab-panel");
+  const ACTIVE_CLS = [
+    "!text-fg",
+    "!border-accent-500",
+    "dark:!border-accent-300",
+  ];
 
   function activateTab(target: string) {
     tabs.forEach((btn) => {
@@ -126,10 +177,12 @@ const uni = projects.filter((p) => p.category === 'uni');
       ACTIVE_CLS.forEach((c) => btn.classList.toggle(c, isActive));
     });
     panels.forEach((panel) => {
-      panel.classList.toggle('hidden', panel.id !== `proj-tab-${target}`);
+      panel.classList.toggle("hidden", panel.id !== `proj-tab-${target}`);
     });
   }
 
-  tabs.forEach((btn) => btn.addEventListener('click', () => activateTab(btn.dataset.projTab!)));
-  activateTab('personal');
+  tabs.forEach((btn) =>
+    btn.addEventListener("click", () => activateTab(btn.dataset.projTab!)),
+  );
+  activateTab("personal");
 </script>
