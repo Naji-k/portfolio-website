@@ -1,0 +1,5 @@
+dist/
+build/
+.astro/
+.claude/
+husky/
