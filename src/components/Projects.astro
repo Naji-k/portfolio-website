@@ -40,7 +40,6 @@ const uni = projects.filter((p) => p.category === 'uni');
           class={`group block bg-panel border border-wire rounded-xl p-8 ${project.hasDetail ? 'hover:border-accent-500 dark:hover:border-accent-300 hover:-translate-y-0.5 hover:shadow-xl dark:hover:shadow-accent-500/10 cursor-pointer' : 'cursor-default'} transition-all duration-300`}
         >
           <div class="flex gap-6 items-start">
-            <!-- Logo / Icon -->
             <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500 to-slate-700 flex items-center justify-center text-white text-sm font-bold shrink-0">
               {project.logo
                 ? <img src={project.logo} alt={project.title} class="w-7 h-7 object-contain" />

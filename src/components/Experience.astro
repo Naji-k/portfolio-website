@@ -33,11 +33,9 @@ import education from '../data/education.json';
   <div id="exp-tab-work" class="exp-tab-panel tab-panel" data-animate-stagger>
     {experience.map((job, i) => (
       <div class="relative pl-8 pb-12 last:pb-0">
-        <!-- Timeline line -->
         {i < experience.length - 1 && (
           <div class="absolute left-[11px] top-6 bottom-0 w-px bg-wire"></div>
         )}
-        <!-- Timeline dot -->
         <div class="absolute left-0 top-1.5 w-[22px] h-[22px] rounded-full bg-accent-500 border-[3px] border-base shadow"></div>
 
         <div class="bg-panel border border-wire rounded-xl p-6 hover:border-accent-500 dark:hover:border-accent-300 transition-colors duration-300">

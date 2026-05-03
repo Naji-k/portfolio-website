@@ -1,46 +1,57 @@
 ---
-import profile from '../data/profile.json';
+import profile from "../data/profile.json";
 ---
 
-<section
-  id="about"
-  class="py-24 px-6 max-w-5xl mx-auto"
->
+<section id="about" class="mx-auto max-w-5xl px-6 py-24">
   <div>
     <div class="mb-10" data-animate>
-      <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">About</p>
-      <h2 class="text-3xl font-bold text-fg">Who I am</h2>
+      <p
+        class="text-accent-500 dark:text-accent-300 mb-2 text-sm font-medium tracking-widest uppercase"
+      >
+        About
+      </p>
+      <h2 class="text-fg text-3xl font-bold">Who I am</h2>
     </div>
 
     <p
-      class="text-base text-fg-soft leading-relaxed dark:leading-[1.75] max-w-[65ch] mb-8 [text-wrap:pretty]"
+      class="text-fg-soft mb-8 max-w-[65ch] text-base leading-relaxed [text-wrap:pretty] dark:leading-[1.75]"
       data-animate
     >
       {profile.summary}
     </p>
 
-    <p class="flex items-center gap-2 text-sm text-fg-muted" data-animate>
-      <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+    <p class="text-fg-muted flex items-center gap-2 text-sm" data-animate>
+      <svg
+        class="h-4 w-4 shrink-0"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+        ></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
       </svg>
       {profile.location}
     </p>
   </div>
- <div
-    class="border-t border-wire pt-8 mt-8"
-    data-animate
-  >
+  <div class="border-wire mt-8 border-t pt-8" data-animate>
     <div class="space-y-2.5">
       {
         Object.entries(profile.skills).map(([category, items]) => (
-          <div class="flex gap-5 items-start">
-            <span class="text-xs font-semibold uppercase tracking-wider text-fg-muted w-24 pt-0.5 shrink-0">
+          <div class="flex items-start gap-5">
+            <span class="text-fg-muted w-24 shrink-0 pt-0.5 text-xs font-semibold tracking-wider uppercase">
               {category}
             </span>
             <div class="flex flex-wrap gap-1.5">
               {(items as string[]).map((skill) => (
-                <span class="text-xs px-2 py-0.5 rounded bg-wire text-fg-mid">
+                <span class="bg-wire text-fg-mid rounded px-2 py-0.5 text-xs">
                   {skill}
                 </span>
               ))}

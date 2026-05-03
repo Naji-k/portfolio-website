@@ -1,31 +1,36 @@
 ---
-import profile from '../data/profile.json';
+import profile from "../data/profile.json";
 
 const entries = Object.entries(profile.skills);
 ---
 
-<section
-  id="stack"
-  class="py-24 px-6 max-w-5xl mx-auto"
->
+<section id="stack" class="mx-auto max-w-5xl px-6 py-24">
   <div class="mb-10" data-animate>
-    <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Skills</p>
-    <h2 class="text-3xl font-bold text-fg">Tech Stack</h2>
+    <p
+      class="text-accent-500 dark:text-accent-300 mb-2 text-sm font-medium tracking-widest uppercase"
+    >
+      Skills
+    </p>
+    <h2 class="text-fg text-3xl font-bold">Tech Stack</h2>
   </div>
 
   <div
-    class="bg-panel border border-wire rounded-xl overflow-hidden"
+    class="bg-panel border-wire overflow-hidden rounded-xl border"
     data-animate-stagger
   >
-    {entries.map(([category, items], i) => (
-      <div class={`flex flex-wrap items-baseline gap-x-8 gap-y-1.5 px-6 py-5 ${i < entries.length - 1 ? 'border-b border-wire' : ''}`}>
-        <span class="text-[10px] font-semibold uppercase tracking-[0.14em] text-fg-muted shrink-0 w-28">
-          {category}
-        </span>
-        <p class="text-sm text-fg-soft leading-relaxed flex-1 min-w-[200px]">
-          {(items as string[]).join(' · ')}
-        </p>
-      </div>
-    ))}
+    {
+      entries.map(([category, items], i) => (
+        <div
+          class={`flex flex-wrap items-baseline gap-x-8 gap-y-1.5 px-6 py-5 ${i < entries.length - 1 ? "border-wire border-b" : ""}`}
+        >
+          <span class="text-fg-muted w-28 shrink-0 text-[10px] font-semibold tracking-[0.14em] uppercase">
+            {category}
+          </span>
+          <p class="text-fg-soft min-w-[200px] flex-1 text-sm leading-relaxed">
+            {(items as string[]).join(" · ")}
+          </p>
+        </div>
+      ))
+    }
   </div>
 </section>
