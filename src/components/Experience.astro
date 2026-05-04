@@ -6,21 +6,21 @@ import education from "../data/education.json";
 <section id="experience" class="mx-auto max-w-5xl px-6 py-24">
   <!-- Section header -->
   <div class="mb-12" data-animate>
-    <!-- <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Background</p> -->
-    <h2 class="text-fg text-3xl font-bold">Experience & Education</h2>
+    <!-- <p class="text-ui font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Background</p> -->
+    <h2 class="text-fg text-section font-bold">Experience & Education</h2>
   </div>
 
   <!-- Tab buttons -->
   <div class="border-wire mb-10 flex gap-1 border-b" data-animate>
     <button
       data-exp-tab="work"
-      class="exp-tab-btn text-fg-soft hover:text-fg -mb-px border-b-2 border-transparent px-5 py-2.5 text-sm font-medium transition-colors duration-200"
+      class="exp-tab-btn text-fg-soft hover:text-fg text-ui -mb-px border-b-2 border-transparent px-5 py-2.5 font-medium transition-colors duration-200"
     >
       Work Experience
     </button>
     <button
       data-exp-tab="education"
-      class="exp-tab-btn text-fg-soft hover:text-fg -mb-px border-b-2 border-transparent px-5 py-2.5 text-sm font-medium transition-colors duration-200"
+      class="exp-tab-btn text-fg-soft hover:text-fg text-ui -mb-px border-b-2 border-transparent px-5 py-2.5 font-medium transition-colors duration-200"
     >
       Education
     </button>
@@ -39,18 +39,18 @@ import education from "../data/education.json";
           <div class="bg-panel border-wire hover:border-accent-500 dark:hover:border-accent-300 rounded-xl border p-6 transition-colors duration-300">
             <div class="mb-3 flex flex-wrap items-start justify-between gap-2">
               <div>
-                <h3 class="text-fg text-base font-semibold">{job.title}</h3>
-                <p class="text-accent-500 dark:text-accent-300 text-sm font-medium">
+                <h3 class="text-fg text-card font-semibold">{job.title}</h3>
+                <p class="text-accent-500 dark:text-accent-300 text-ui font-medium">
                   {job.company} · {job.location}
                 </p>
               </div>
-              <span class="text-fg-muted font-mono text-xs whitespace-nowrap">
+              <span class="text-fg-muted text-tag font-mono whitespace-nowrap">
                 {job.startDate} — {job.endDate}
               </span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-5">
               {job.highlights.map((h) => (
-                <li class="text-fg-soft flex gap-2 text-base leading-relaxed dark:leading-[1.75]">
+                <li class="text-fg-soft text-body flex gap-2 leading-relaxed dark:leading-[1]">
                   <span class="bg-accent-500 dark:bg-accent-300 mt-1.5 h-1 w-1 shrink-0 rounded-full" />
                   <span set:html={h} />
                 </li>
@@ -71,7 +71,7 @@ import education from "../data/education.json";
     <!-- Degrees -->
     <div class="mb-10">
       <h3
-        class="text-fg-muted mb-6 text-xs font-semibold tracking-wider uppercase"
+        class="text-fg-muted text-tag mb-6 font-semibold tracking-wider uppercase"
       >
         Degrees
       </h3>
@@ -81,18 +81,18 @@ import education from "../data/education.json";
             <div class="bg-panel border-wire hover:border-accent-500 dark:hover:border-accent-300 rounded-xl border p-6 transition-colors duration-300">
               <div class="mb-2 flex flex-wrap items-start justify-between gap-2">
                 <div>
-                  <h4 class="text-fg text-base font-semibold">{deg.degree}</h4>
-                  <p class="text-accent-500 dark:text-accent-300 text-sm font-medium">
+                  <h4 class="text-fg text-card font-semibold">{deg.degree}</h4>
+                  <p class="text-accent-500 dark:text-accent-300 text-ui font-medium">
                     {deg.institution} · {deg.location}
                   </p>
                 </div>
-                <span class="text-fg-muted font-mono text-xs whitespace-nowrap">
+                <span class="text-fg-muted text-tag font-mono whitespace-nowrap">
                   {deg.startDate} — {deg.endDate}
                 </span>
               </div>
               {deg.description && (
                 <p
-                  class="text-fg-soft text-base leading-relaxed dark:leading-[1.75]"
+                  class="text-fg-soft text-body leading-relaxed dark:leading-[1.75]"
                   style="text-wrap: pretty"
                 >
                   {deg.description}
@@ -107,7 +107,7 @@ import education from "../data/education.json";
     <!-- Courses -->
     <div>
       <h3
-        class="text-fg-muted mb-4 text-xs font-semibold tracking-wider uppercase"
+        class="text-fg-muted text-tag mb-4 font-semibold tracking-wider uppercase"
       >
         Courses & Certificates
       </h3>
@@ -116,10 +116,12 @@ import education from "../data/education.json";
           education.courses.map((course) => (
             <div class="bg-panel border-wire flex flex-wrap items-center justify-between gap-2 rounded-lg border px-4 py-3">
               <div>
-                <span class="text-fg text-sm font-medium">{course.title}</span>
-                <span class="text-fg-soft ml-2 text-xs">{course.provider}</span>
+                <span class="text-fg text-ui font-medium">{course.title}</span>
+                <span class="text-fg-soft text-caption ml-2">
+                  {course.provider}
+                </span>
               </div>
-              <span class="text-fg-muted font-mono text-xs">
+              <span class="text-fg-muted text-tag font-mono">
                 {course.startDate === course.endDate
                   ? course.startDate
                   : `${course.startDate} — ${course.endDate}`}

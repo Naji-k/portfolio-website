@@ -6,21 +6,21 @@ import profile from "../data/profile.json";
   <div>
     <div class="mb-10" data-animate>
       <p
-        class="text-accent-500 dark:text-accent-300 mb-2 text-sm font-medium tracking-widest uppercase"
+        class="text-accent-500 dark:text-accent-300 text-ui mb-2 font-medium tracking-widest uppercase"
       >
         About
       </p>
-      <h2 class="text-fg text-3xl font-bold">Who I am</h2>
+      <h2 class="text-fg text-section font-bold">Who I am</h2>
     </div>
 
     <p
-      class="text-fg-soft mb-8 max-w-[65ch] text-base leading-relaxed [text-wrap:pretty] dark:leading-[1.75]"
+      class="text-fg-soft text-body mb-8 max-w-[65ch] leading-relaxed [text-wrap:pretty] dark:leading-[1.75]"
       data-animate
     >
       {profile.summary}
     </p>
 
-    <p class="text-fg-muted flex items-center gap-2 text-sm" data-animate>
+    <p class="text-fg-muted text-ui flex items-center gap-2" data-animate>
       <svg
         class="h-4 w-4 shrink-0"
         fill="none"
@@ -46,12 +46,12 @@ import profile from "../data/profile.json";
       {
         Object.entries(profile.skills).map(([category, items]) => (
           <div class="flex items-start gap-5">
-            <span class="text-fg-muted w-24 shrink-0 pt-0.5 text-xs font-semibold tracking-wider uppercase">
+            <span class="text-fg-muted text-tag w-24 shrink-0 pt-0.5 font-semibold tracking-wider uppercase">
               {category}
             </span>
             <div class="flex flex-wrap gap-1.5">
               {(items as string[]).map((skill) => (
-                <span class="bg-wire text-fg-mid rounded px-2 py-0.5 text-xs">
+                <span class="bg-wire text-fg-mid text-tag rounded px-2 py-0.5">
                   {skill}
                 </span>
               ))}

@@ -9,20 +9,20 @@ const uni = projects.filter((p) => p.category === "uni");
   <!-- Section header -->
   <div class="mb-12" data-animate>
     <!-- <p class="text-sm font-medium text-accent-500 dark:text-accent-300 mb-2 tracking-widest uppercase">Work</p> -->
-    <h2 class="text-fg text-3xl font-bold">Projects</h2>
+    <h2 class="text-fg text-section font-bold">Projects</h2>
   </div>
 
   <!-- Tab buttons -->
   <div class="border-wire mb-10 flex gap-1 border-b" data-animate>
     <button
       data-proj-tab="personal"
-      class="proj-tab-btn text-fg-soft hover:text-fg -mb-px border-b-2 border-transparent px-5 py-2.5 text-sm font-medium transition-colors duration-200"
+      class="proj-tab-btn text-fg-soft hover:text-fg text-ui -mb-px border-b-2 border-transparent px-5 py-2.5 font-medium transition-colors duration-200"
     >
       Projects
     </button>
     <button
       data-proj-tab="uni"
-      class="proj-tab-btn text-fg-soft hover:text-fg -mb-px border-b-2 border-transparent px-5 py-2.5 text-sm font-medium transition-colors duration-200"
+      class="proj-tab-btn text-fg-soft hover:text-fg text-ui -mb-px border-b-2 border-transparent px-5 py-2.5 font-medium transition-colors duration-200"
     >
       University
     </button>
@@ -55,7 +55,7 @@ const uni = projects.filter((p) => p.category === "uni");
               </div>
 
               <div class="min-w-0 flex-1">
-                <p class="text-accent-500 dark:text-accent-300 mb-1 text-xs font-medium tracking-wider uppercase">
+                <p class="text-accent-500 dark:text-accent-300 text-tag mb-1 font-medium tracking-wider uppercase">
                   Personal Project
                 </p>
                 <h3 class="text-fg group-hover:text-accent-500 dark:group-hover:text-accent-300 mb-3 flex items-center gap-1.5 text-xl font-semibold transition-colors">
@@ -77,14 +77,14 @@ const uni = projects.filter((p) => p.category === "uni");
                   )}
                 </h3>
                 <p
-                  class="text-fg-soft mb-5 max-w-[65ch] text-base leading-relaxed dark:leading-[1.75]"
+                  class="text-fg-soft text-body mb-5 max-w-[65ch] leading-relaxed dark:leading-[1.75]"
                   style="text-wrap: pretty"
                 >
                   {project.description}
                 </p>
                 <div class="flex flex-wrap gap-1.5">
                   {project.tech.map((tag) => (
-                    <span class="bg-wire text-fg-mid border-wire rounded-full border px-2 py-0.5 text-xs">
+                    <span class="bg-wire text-fg-mid border-wire text-tag rounded-full border px-2 py-0.5">
                       {tag}
                     </span>
                   ))}
@@ -122,7 +122,7 @@ const uni = projects.filter((p) => p.category === "uni");
               )}
             </div>
 
-            <h3 class="text-fg group-hover:text-accent-500 dark:group-hover:text-accent-300 mb-2 flex items-center gap-1 text-base font-semibold transition-colors">
+            <h3 class="text-fg group-hover:text-accent-500 dark:group-hover:text-accent-300 text-card mb-2 flex items-center gap-1 font-semibold transition-colors">
               {project.title}
               {project.hasDetail && (
                 <svg
@@ -142,7 +142,7 @@ const uni = projects.filter((p) => p.category === "uni");
             </h3>
 
             <p
-              class="text-fg-soft mb-4 text-base leading-relaxed dark:leading-[1.75]"
+              class="text-fg-soft text-body mb-4 leading-relaxed dark:leading-[1.75]"
               style="text-wrap: pretty"
             >
               {project.description}
@@ -150,7 +150,7 @@ const uni = projects.filter((p) => p.category === "uni");
 
             <div class="flex flex-wrap gap-1.5">
               {project.tech.map((tag) => (
-                <span class="bg-wire text-fg-mid border-wire rounded-full border px-2 py-0.5 text-xs">
+                <span class="bg-wire text-fg-mid border-wire text-tag rounded-full border px-2 py-0.5">
                   {tag}
                 </span>
               ))}

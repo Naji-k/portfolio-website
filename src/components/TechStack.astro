@@ -7,11 +7,11 @@ const entries = Object.entries(profile.skills);
 <section id="stack" class="mx-auto max-w-5xl px-6 py-24">
   <div class="mb-10" data-animate>
     <p
-      class="text-accent-500 dark:text-accent-300 mb-2 text-sm font-medium tracking-widest uppercase"
+      class="text-accent-500 dark:text-accent-300 text-ui mb-2 font-medium tracking-widest uppercase"
     >
       Skills
     </p>
-    <h2 class="text-fg text-3xl font-bold">Tech Stack</h2>
+    <h2 class="text-fg text-section font-bold">Tech Stack</h2>
   </div>
 
   <div
@@ -23,10 +23,10 @@ const entries = Object.entries(profile.skills);
         <div
           class={`flex flex-wrap items-baseline gap-x-8 gap-y-1.5 px-6 py-5 ${i < entries.length - 1 ? "border-wire border-b" : ""}`}
         >
-          <span class="text-fg-muted w-28 shrink-0 text-[10px] font-semibold tracking-[0.14em] uppercase">
+          <span class="text-fg-muted text-tag w-28 shrink-0 font-semibold tracking-[0.14em] uppercase">
             {category}
           </span>
-          <p class="text-fg-soft min-w-[200px] flex-1 text-sm leading-relaxed">
+          <p class="text-fg-soft text-ui min-w-[200px] flex-1 leading-relaxed">
             {(items as string[]).join(" · ")}
           </p>
         </div>

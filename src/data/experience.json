@@ -7,11 +7,8 @@
     "startDate": "Oct 2024",
     "endDate": "Sep 2025",
     "highlights": [
-      "Developed and maintained the CES 2025 flagship demo, demonstrating live map customization using the TomTom software stack — successfully delivered for CES 2025 and continued for other company events.",
-      "Took full ownership of the project, collaborating closely with design, marketing, and key stakeholders to align technical delivery with company messaging and goals.",
-      "Built a dynamic web interface using Node.js and Flask; implemented a state machine to ensure a clear, reliable, and maintainable demo flow.",
-      "Integrated the Map-Maker tool via okHttp (Kotlin), enabling live map style customization during presentations.",
-      "Nominated for promotion to Software Engineer II, recognizing technical impact and cross-team leadership."
+      "Built product demo systems and backend integrations for live showcases, including CES 2025. Worked across engineering, design, marketing, and stakeholder teams to turn technical capabilities into clear product experiences.",
+      "Focus: Product demo engineering · Backend integrations · Cross-functional delivery"
     ]
   },
   {
