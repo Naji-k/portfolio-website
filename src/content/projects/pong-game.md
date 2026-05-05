@@ -59,3 +59,28 @@ match progression.
 - Built tournament logic with live status updates, bracket progression, and
   match flow management.
 - Containerized the application with Docker and used Caddy as a reverse proxy.
+
+## Screenshots
+
+<div>
+  <div style="text-align: center;">
+    <p style="font-weight: bold; margin-bottom: 12px;">Video</p>
+    <img src="/assets/projects/Pong/pong-video.mov" alt="pong-demo" />
+  </div>
+  <div style="text-align: center;">
+    <p style="font-weight: bold; margin-bottom: 12px;">Remote 4 players</p>
+    <img src="/assets/projects/Pong/4players.png" alt="Pong 4 players" style="width: 100%; height: auto;" />
+  </div>
+  <div style="text-align: center;">
+    <p style="font-weight: bold; margin-bottom: 12px;">Game lobby</p>
+    <img src="/assets/projects/Pong/game-lobby.png" alt="Pong game lobby" style="width: 100%; height: auto;" />
+  </div>
+  <div style="text-align: center;">
+    <p style="font-weight: bold; margin-bottom: 12px;">Tournament</p>
+    <img src="/assets/projects/Pong/tournament.png" alt="Pong tournament" style="width: 100%; height: auto;" />
+  </div>
+  <div style="text-align: center;">
+    <p style="font-weight: bold; margin-bottom: 12px;">Profile</p>
+    <img src="/assets/projects/Pong/profile.png" alt="Pong Profile" style="width: 100%; height: auto;" />
+  </div>
+</div>
