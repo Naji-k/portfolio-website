@@ -49,7 +49,11 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
         </>
       )
     }
-
+    <script is:inline>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
     <!-- Prevent flash of wrong theme -->
     <script is:inline>
       (function () {
