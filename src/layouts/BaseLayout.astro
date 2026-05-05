@@ -9,6 +9,8 @@ const {
   title = "Naji Kanounji — Software Engineer",
   description = "Portfolio of Naji Kanounji, a software engineer based in Amsterdam specializing in backend development, API integrations, and automation.",
 } = Astro.props;
+
+const gaId = import.meta.env.PUBLIC_GA_ID;
 ---
 
 <!doctype html>
@@ -30,6 +32,23 @@ const {
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Google Analytics 4 -->
+    {
+      gaId && (
+        <>
+          <script
+            is:inline
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+          />
+          <script
+            is:inline
+            set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}',{send_page_view:true});`}
+          />
+        </>
+      )
+    }
 
     <!-- Prevent flash of wrong theme -->
     <script is:inline>
@@ -71,6 +90,19 @@ const {
             observer.observe(el);
           }
         });
+
+      // GA4 click delegation
+      document.addEventListener("click", function (e) {
+        const el = (e.target as Element).closest("[data-ga-event]");
+        if (!el || typeof (window as any).gtag !== "function") return;
+        const d = (el as HTMLElement).dataset;
+        const params: Record<string, string> = {};
+        if (d.gaLinkType) params.link_type = d.gaLinkType;
+        if (d.gaLocation) params.location = d.gaLocation;
+        if (d.gaProjectId) params.project_id = d.gaProjectId;
+        if (d.gaProjectTitle) params.project_title = d.gaProjectTitle;
+        (window as any).gtag("event", d.gaEvent, params);
+      });
     </script>
   </body>
 </html>

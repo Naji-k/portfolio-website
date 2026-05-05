@@ -39,6 +39,12 @@ const uni = projects.filter((p) => p.category === "uni");
         personal.map((project) => (
           <a
             href={project.hasDetail ? `/projects/${project.id}` : undefined}
+            data-ga-event={project.hasDetail ? "portfolio_click" : undefined}
+            data-ga-link-type={project.hasDetail ? "project_card" : undefined}
+            data-ga-project-id={project.hasDetail ? project.id : undefined}
+            data-ga-project-title={
+              project.hasDetail ? project.title : undefined
+            }
             class={`group bg-panel border-wire block rounded-xl border p-8 ${project.hasDetail ? "hover:border-accent-500 dark:hover:border-accent-300 dark:hover:shadow-accent-500/10 cursor-pointer hover:-translate-y-0.5 hover:shadow-xl" : "cursor-default"} transition-all duration-300`}
           >
             <div class="flex items-start gap-6">
@@ -108,6 +114,12 @@ const uni = projects.filter((p) => p.category === "uni");
         uni.map((project) => (
           <a
             href={project.hasDetail ? `/projects/${project.id}` : undefined}
+            data-ga-event={project.hasDetail ? "portfolio_click" : undefined}
+            data-ga-link-type={project.hasDetail ? "project_card" : undefined}
+            data-ga-project-id={project.hasDetail ? project.id : undefined}
+            data-ga-project-title={
+              project.hasDetail ? project.title : undefined
+            }
             class={`group bg-panel border-wire block rounded-xl border p-6 ${project.hasDetail ? "hover:border-accent-500 dark:hover:border-accent-300 dark:hover:shadow-accent-500/10 cursor-pointer hover:-translate-y-1 hover:shadow-lg" : "cursor-default"} transition-all duration-300`}
           >
             <div class="mb-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-slate-600 to-slate-800 text-xs font-bold text-white">
