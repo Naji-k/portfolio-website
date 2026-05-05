@@ -1,15 +1,14 @@
 ---
-title: Webserver
+title: Custom HTTP Server
 description: A non-blocking HTTP/1.1 server built from scratch in C++.
 demoUrl: null
-githubUrl: null
+githubUrl: "https://github.com/julicaro31/Webserv"
 ---
 
 ## Overview
 
 A from-scratch HTTP/1.1 server written in C++, built without any external HTTP
-libraries. The server handles concurrent connections using non-blocking I/O with
-`epoll` / `kqueue`, making it production-capable for static file serving and
+libraries. The server handles concurrent connections using non-blocking I/O, making it production-capable for static file serving and
 dynamic CGI execution.
 
 ## Features
@@ -27,7 +26,6 @@ dynamic CGI execution.
 
 - Built in **C++** with full POSIX socket API usage (`socket`, `bind`, `listen`,
   `accept`)
-- Event-driven architecture using `epoll` (Linux) / `kqueue` (macOS)
 - Parses raw HTTP request headers and bodies from scratch
 - CGI integration spawns child processes and pipes I/O bidirectionally
 - Handles chunked transfer encoding and persistent connections

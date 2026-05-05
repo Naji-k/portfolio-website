@@ -1,36 +1,44 @@
 ---
 title: Pong Game
-description:
-  Backend for a multiplayer tournament game with real-time gameplay and secure
-  authentication.
+description: "A real-time 3D multiplayer Pong game with tournament management and backend-authoritative gameplay."
 demoUrl: null
-githubUrl: null
+githubUrl: https://github.com/Naji-k/ft_transcendence-pong
 ---
+# ft_transcendence Pong
 
 ## Overview
 
-A multiplayer Pong tournament system with a robust backend built in a modern
-TypeScript monorepo. Players can compete in real-time matches and participate in
-organized tournaments with persistent rankings.
+ft_transcendence(Pong) is a real-time 3D multiplayer Pong game with tournament management, player profiles, authentication, and live gameplay synchronization.
 
-## Architecture
-
-Built as part of a monorepo architecture separating concerns cleanly across
-backend, frontend, and shared utilities.
+The project was built as a full-stack application with a backend-authoritative architecture, where game state and gameplay rules are controlled server-side to support fair play and reduce cheating risks.
 
 ## Features
 
-- **Real-time gameplay** via WebSockets using tRPC subscriptions
-- **Tournament system** with bracket management and match history
-- **Secure authentication** with JWT-based access and refresh token flows
-- **Scalable API** design using Fastify and tRPC for end-to-end type safety
-- **Persistent storage** with SQLite via Drizzle ORM
+- Real-time 3D Pong gameplay
+- Support for 2–6 players per match
+- Tournament creation, joining, brackets, and progression
+- User authentication with email/password and Google OAuth
+- JWT-based sessions
+- Two-factor authentication support
+- User profiles with avatars
+- Friend system and online/offline status
+- Match history and player statistics
+- Real-time game and tournament status updates
+
+## Architecture
+
+The project uses a monorepo structure with separate frontend, backend, infrastructure, and shared packages.
+
+The frontend is built with SvelteKit and Babylon.js for the 3D game experience. The backend is built with Fastify and tRPC, using SQLite with Drizzle ORM for persistence.
+
+Real-time communication is handled through tRPC WebSocket subscriptions. Player actions are sent to the backend, while game state updates are broadcast back to clients. The backend remains the source of truth for game state, physics, and match progression.
 
 ## Technical Highlights
 
-- **Fastify** for high-performance HTTP and WebSocket handling
-- **tRPC** for fully type-safe API contracts between client and server
-- **Drizzle ORM** with **SQLite** for lightweight but powerful relational
-  storage
-- **JWT** authentication with secure token management
-- Monorepo structure enabling shared types across frontend and backend
+- Designed backend-authoritative gameplay to keep game state and physics controlled server-side.
+- Used tRPC for type-safe APIs and WebSocket subscriptions across the full stack.
+- Implemented authentication with JWT, Argon2 password hashing, and Google OAuth.
+- Used Zod schemas for input validation and safer API boundaries.
+- Structured the project as a monorepo with shared packages for database access, tRPC contracts, and TypeScript configuration.
+- Built tournament logic with live status updates, bracket progression, and match flow management.
+- Containerized the application with Docker and used Caddy as a reverse proxy.

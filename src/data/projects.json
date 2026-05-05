@@ -1,19 +1,19 @@
 [
   {
-    "id": "matchBeforeApply",
+    "id": "match-before-apply",
     "title": "Match Before Apply",
     "category": "personal",
     "description": "A product I built to help candidates understand how well their CV matches a job description before applying. It analyzes CV-job fit, generates a match score, and gives ATS-focused improvement suggestions through a multi-agent AI workflow.",
-    "tech": ["FastAPI", "Custom AI Agents", "SvelteKit", "JWT", "GCP", "UIKit"],
+    "tech": ["FastAPI", "Custom AI Agents", "SvelteKit", "JWT", "GCP"],
     "logo": null,
-    "hasDetail": false
+    "hasDetail": true
   },
   {
     "id": "adstore",
     "title": "ADStore",
     "category": "personal",
     "description": "A secondhand marketplace iOS app with real-time chat and listing functionality, powered by Firebase and GCP.",
-    "tech": ["Swift", "iOS", "Firebase", "GCP", "UIKit"],
+    "tech": ["Swift", "UIKit", "Firebase", "MapKit", "URLSession"],
     "logo": null,
     "hasDetail": true
   },
@@ -21,17 +21,17 @@
     "id": "pong-game",
     "title": "Pong Game",
     "category": "uni",
-    "description": "Backend for a multiplayer tournament game with real-time gameplay via WebSockets and secure authentication in a monorepo architecture.",
-    "tech": ["Fastify", "tRPC", "SQLite", "Drizzle ORM", "WebSockets", "JWT"],
+    "description": "A real-time 3D multiplayer Pong game with tournament management, player profiles, authentication, and live gameplay synchronization.",
+    "tech": ["TypeScript", "SvelteKit", "tRPC", "SQLite", "Drizzle ORM", "Babylon.js", "WebSockets"],
     "logo": null,
     "hasDetail": true
   },
   {
     "id": "webserver",
-    "title": "Webserver",
+    "title": "Custom HTTP Server",
     "category": "uni",
-    "description": "A non-blocking HTTP server in C++ handling GET, POST, and DELETE requests, serving static files and dynamic CGI content.",
-    "tech": ["C++", "HTTP", "CGI"],
+    "description": "A non-blocking HTTP server built from scratch in C++ to understand how web servers work under the hood handling GET, POST, and DELETE requests, serving static files and dynamic CGI content.",
+    "tech": ["C++", "HTTP", "CGI", "Sockets"],
     "logo": null,
     "hasDetail": true
   }
