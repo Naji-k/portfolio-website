@@ -66,3 +66,16 @@ Knowing whether I was actually a good fit was not.
 
 Instead of just organizing applications,  
 I built a tool to **evaluate them first — and track them properly after.**
+
+## Screenshots
+
+<div>
+    <div style="text-align: center; margin: 24px 0;font-weight: bold;">
+      <p style="margin: 12px 0;">Multi-Agent Pipeline Architecture</p>
+      <img src="/assets/projects/MatchBeforeApply/Diagram.jpg" alt="Multi-Agent Pipeline Architecture" />
+      <p style="margin: 12px 0;">Match Score &amp; Gap Analysis</p>
+      <img src="/assets/projects/MatchBeforeApply/DemoResult.png" alt="Match Score and Gap Analysis" />
+      <p style="margin: 12px 0;">Application Tracker (Kanban Board)</p>
+      <img src="/assets/projects/MatchBeforeApply/Board.png" alt="Application Tracker Kanban Board"/>
+    </div>
+</div>

@@ -5,7 +5,16 @@
     "category": "personal",
     "description": "A product I built to help candidates understand how well their CV matches a job description before applying. It analyzes CV-job fit, generates a match score, and gives ATS-focused improvement suggestions through a multi-agent AI workflow.",
     "tech": ["FastAPI", "Custom AI Agents", "SvelteKit", "JWT", "GCP"],
-    "logo": null,
+    "logo": "/assets/projects/MatchBeforeApply/Logo.png",
+    "hasDetail": true
+  },
+  {
+    "id": "feedback-bot",
+    "title": "Feedback Bot",
+    "category": "personal",
+    "description": "A Slack bot built to automate feedback management across multiple channels. It uses AI to categorize feedback, creates Jira tickets, and visualizes data with Grafana dashboards.",
+    "tech": ["Python", "Slack API", "OpenAI API", "Jira API", "Grafana"],
+    "logo": "/assets/projects/feedback-bot/Logo.png",
     "hasDetail": true
   },
   {

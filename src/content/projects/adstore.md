@@ -31,3 +31,19 @@ Firebase for real-time data sync and GCP for scalable backend infrastructure.
 - Deployed backend services on **GCP**, including Cloud Functions for
   notification triggers
 - Used **CocoaPods** for dependency management
+
+<div>
+  <div style="text-align: center;">
+    <p style="font-weight: bold; margin-bottom: 12px;">Video</p>
+    <img src="/assets/projects/ADStore/movie.gif" alt="ADStore-demo" style="width: 50%; height: auto;" />
+  </div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0;">
+  <div style="text-align: center;">
+    <p style="font-weight: bold; margin-bottom: 12px;">Chat & Gap Analysis</p>
+    <img src="/assets/projects/ADStore/Chat.png" alt="ADStore chat" style="width: 100%; height: auto;" />
+  </div>
+  <div style="text-align: center;">
+    <p style="font-weight: bold; margin-bottom: 12px;">Home screen</p>
+    <img src="/assets/projects/ADStore/Home.png" alt="ADStore home" style="width: 100%; height: auto;" />
+  </div>
+</div>
