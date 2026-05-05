@@ -49,9 +49,7 @@ jobs:
       - name: Deploy with FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          protocol: ${{secrets.PROTOCOL}}
           server: ${{secrets.HOST}}
-          port: ${{secrets.PORT}}
           username: ${{secrets.USER}}
           password: ${{secrets.PASSWORD}}
           local-dir: dist/
