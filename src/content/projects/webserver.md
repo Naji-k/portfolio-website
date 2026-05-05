@@ -8,8 +8,8 @@ githubUrl: "https://github.com/julicaro31/Webserv"
 ## Overview
 
 A from-scratch HTTP/1.1 server written in C++, built without any external HTTP
-libraries. The server handles concurrent connections using non-blocking I/O, making it production-capable for static file serving and
-dynamic CGI execution.
+libraries. The server handles concurrent connections using non-blocking I/O,
+making it production-capable for static file serving and dynamic CGI execution.
 
 ## Features
 

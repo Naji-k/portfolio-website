@@ -1,16 +1,22 @@
 ---
 title: Pong Game
-description: "A real-time 3D multiplayer Pong game with tournament management and backend-authoritative gameplay."
+description:
+  "A real-time 3D multiplayer Pong game with tournament management and
+  backend-authoritative gameplay."
 demoUrl: null
 githubUrl: https://github.com/Naji-k/ft_transcendence-pong
 ---
+
 # ft_transcendence Pong
 
 ## Overview
 
-ft_transcendence(Pong) is a real-time 3D multiplayer Pong game with tournament management, player profiles, authentication, and live gameplay synchronization.
+ft_transcendence(Pong) is a real-time 3D multiplayer Pong game with tournament
+management, player profiles, authentication, and live gameplay synchronization.
 
-The project was built as a full-stack application with a backend-authoritative architecture, where game state and gameplay rules are controlled server-side to support fair play and reduce cheating risks.
+The project was built as a full-stack application with a backend-authoritative
+architecture, where game state and gameplay rules are controlled server-side to
+support fair play and reduce cheating risks.
 
 ## Features
 
@@ -27,18 +33,29 @@ The project was built as a full-stack application with a backend-authoritative a
 
 ## Architecture
 
-The project uses a monorepo structure with separate frontend, backend, infrastructure, and shared packages.
+The project uses a monorepo structure with separate frontend, backend,
+infrastructure, and shared packages.
 
-The frontend is built with SvelteKit and Babylon.js for the 3D game experience. The backend is built with Fastify and tRPC, using SQLite with Drizzle ORM for persistence.
+The frontend is built with SvelteKit and Babylon.js for the 3D game experience.
+The backend is built with Fastify and tRPC, using SQLite with Drizzle ORM for
+persistence.
 
-Real-time communication is handled through tRPC WebSocket subscriptions. Player actions are sent to the backend, while game state updates are broadcast back to clients. The backend remains the source of truth for game state, physics, and match progression.
+Real-time communication is handled through tRPC WebSocket subscriptions. Player
+actions are sent to the backend, while game state updates are broadcast back to
+clients. The backend remains the source of truth for game state, physics, and
+match progression.
 
 ## Technical Highlights
 
-- Designed backend-authoritative gameplay to keep game state and physics controlled server-side.
-- Used tRPC for type-safe APIs and WebSocket subscriptions across the full stack.
-- Implemented authentication with JWT, Argon2 password hashing, and Google OAuth.
+- Designed backend-authoritative gameplay to keep game state and physics
+  controlled server-side.
+- Used tRPC for type-safe APIs and WebSocket subscriptions across the full
+  stack.
+- Implemented authentication with JWT, Argon2 password hashing, and Google
+  OAuth.
 - Used Zod schemas for input validation and safer API boundaries.
-- Structured the project as a monorepo with shared packages for database access, tRPC contracts, and TypeScript configuration.
-- Built tournament logic with live status updates, bracket progression, and match flow management.
+- Structured the project as a monorepo with shared packages for database access,
+  tRPC contracts, and TypeScript configuration.
+- Built tournament logic with live status updates, bracket progression, and
+  match flow management.
 - Containerized the application with Docker and used Caddy as a reverse proxy.

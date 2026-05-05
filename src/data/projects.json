@@ -22,7 +22,15 @@
     "title": "Pong Game",
     "category": "uni",
     "description": "A real-time 3D multiplayer Pong game with tournament management, player profiles, authentication, and live gameplay synchronization.",
-    "tech": ["TypeScript", "SvelteKit", "tRPC", "SQLite", "Drizzle ORM", "Babylon.js", "WebSockets"],
+    "tech": [
+      "TypeScript",
+      "SvelteKit",
+      "tRPC",
+      "SQLite",
+      "Drizzle ORM",
+      "Babylon.js",
+      "WebSockets"
+    ],
     "logo": null,
     "hasDetail": true
   },

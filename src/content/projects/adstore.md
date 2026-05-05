@@ -13,7 +13,9 @@ buy and sell items with ease. Built natively in Swift, the app integrates
 Firebase for real-time data sync and GCP for scalable backend infrastructure.
 
 ## Features
-- **Real-time chat** between buyers and sellers using Firebase Realtime Database(NoSQL)
+
+- **Real-time chat** between buyers and sellers using Firebase Realtime
+  Database(NoSQL)
 - **Listing management**: create, edit, and browse listings with photos
 - **Favorites**: save items to a personal watchlist
 - **Push notifications** for new messages and listing updates
