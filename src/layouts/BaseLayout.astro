@@ -54,10 +54,7 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
     <script is:inline>
       (function () {
         const stored = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        if (stored === "dark" || (!stored && prefersDark)) {
+        if (stored === "dark" || !stored) {
           document.documentElement.classList.add("dark");
         }
       })();
