@@ -7,8 +7,6 @@ demoUrl: null
 githubUrl: https://github.com/Naji-k/ft_transcendence-pong
 ---
 
-# ft_transcendence Pong
-
 ## Overview
 
 ft_transcendence(Pong) is a real-time 3D multiplayer Pong game with tournament
