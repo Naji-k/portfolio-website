@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#27268a"/>
-  <text x="6" y="23" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="white">M</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200"><rect width="200" height="200" fill="url('#gradient')"></rect><defs><linearGradient id="gradient" gradientTransform="rotate(68 0.5 0.5)"><stop offset="0%" stop-color="#27268a"></stop><stop offset="100%" stop-color="#151461"></stop></linearGradient></defs><g><g fill="#ffffff" transform="matrix(8.58021978021978,0,0,8.58021978021978,39.850939759317335,161.00473864943115)" stroke="#4b5563" stroke-width="0"><path d="M12.95-14.22L12.95 0L9.54 0L4.50-8.85L4.50 0L1.07 0L1.07-14.22L4.50-14.22L9.53-5.37L9.53-14.22L12.95-14.22Z"></path></g></g></svg>
