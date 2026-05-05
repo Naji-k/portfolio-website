@@ -14,7 +14,7 @@ import profile from "../data/profile.json";
     </div>
 
     <p
-      class="text-fg-soft text-body mb-8 max-w-[65ch] leading-relaxed [text-wrap:pretty] dark:leading-[1.75]"
+      class="text-fg-soft text-body mb-8 max-w-[85ch] leading-relaxed [text-wrap:pretty] dark:leading-[1.75]"
       data-animate
     >
       {profile.summary}
@@ -46,12 +46,12 @@ import profile from "../data/profile.json";
       {
         Object.entries(profile.skills).map(([category, items]) => (
           <div class="flex items-start gap-5">
-            <span class="text-fg-muted text-tag w-24 shrink-0 pt-0.5 font-semibold tracking-wider uppercase">
+            <span class="text-fg-muted text-caption w-24 shrink-0 pt-0.5 font-semibold tracking-wider uppercase">
               {category}
             </span>
             <div class="flex flex-wrap gap-1.5">
               {(items as string[]).map((skill) => (
-                <span class="bg-wire text-fg-mid text-tag rounded px-2 py-0.5">
+                <span class="bg-wire text-fg-mid text-caption rounded px-2 py-0.5">
                   {skill}
                 </span>
               ))}

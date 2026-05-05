@@ -7,8 +7,9 @@
     "startDate": "Oct 2024",
     "endDate": "Sep 2025",
     "highlights": [
-      "Built product demo systems and backend integrations for live showcases, including CES 2025. Worked across engineering, design, marketing, and stakeholder teams to turn technical capabilities into clear product experiences.",
-      "Focus: Product demo engineering · Backend integrations · Cross-functional delivery"
+      "Engineered and maintained the Developer Experience Demo project, showcasing TomTom’s navigation capabilities in demo vehicles for global events, including CES 2025.",
+      "Built a dynamic web interface with Node.js and Flask to control live demo flows, integrated Map-Maker for real-time map style customization, and connected the in-house navigation app with vehicle systems for interactive presentations.",
+      "Worked closely with design, marketing, engineering, and stakeholders to align the technical setup with the story TomTom wanted to tell during live showcases."
     ]
   },
   {
@@ -19,8 +20,8 @@
     "startDate": "Mar 2024",
     "endDate": "Sep 2024",
     "highlights": [
-      "Cut feedback triage time by 80% by building and deploying a company-wide Slack bot (Python, Slack-Bolt, OpenAI API) that auto-categorized feedback from 2,000+ users across three channels and generated Jira tickets.",
-      "Improved the AmiGO App by delivering new features and fixing bugs; applied Redux-Saga (React Native) for robust side-effect management."
+      "Built and scaled an AI-powered Slack bot that automated internal feedback triage across multiple Slack channels. The bot categorized input from 2,000+ users, generated structured Jira tickets, and reduced manual triage work by 80%.",
+      "Also contributed to AmiGO, TomTom’s navigation mobile app, by implementing features and fixing bugs in React Native with Redux-Saga."
     ]
   },
   {

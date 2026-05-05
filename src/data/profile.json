@@ -1,28 +1,28 @@
 {
   "name": "Naji Kanounji",
   "title": "Software Engineer",
-  "tagline": "I build backend systems, AI-powered workflows, and product-focused tools.",
+  "tagline": "I build backend systems, AI-enabled products, and tools that solve real problems.",
   "location": "Amsterdam, Netherlands",
   "email": "email@gmail.com",
   "github": "https://github.com/naji-k",
   "linkedin": "https://linkedin.com/",
-  "photo": "/images/profile.jpg",
+  "photo": "images/profile.PNG",
   "summary": "I’m a software engineer building backend systems, AI-powered workflows, and product-focused tools. At TomTom, I built an AI-powered feedback triage system, used across slack channels by 2,000+ users and reducing manual triage work by 80%. I also contributed to demo systems showcased at CES 2025.",
   "specialties": [
     {
       "icon": "terminal",
       "title": "Backend engineering",
-      "description": "APIs, services, and internal tools built for reliability and long-term maintainability."
+      "description": "APIs, backend services, and internal tools built with reliability, clarity, and maintainability in mind."
     },
     {
       "icon": "sparkles",
       "title": "LLM product engineering",
-      "description": "Turning language models into real features: classification, extraction, scoring, and structured output inside production software."
+      "description": "LLM-backed features that parse, classify, compare, and structure information inside real software products."
     },
     {
       "icon": "lightbulb",
       "title": "Product-minded development",
-      "description": "From internal tools at TomTom to MatchBeforeApply, bridging the gap between engineering and real user problems."
+      "description": "Turning real problems into usable products — from internal tools at TomTom to MatchBeforeApply, an AI platform that helps candidates improve their job fit before applying."
     }
   ],
   "skills": {
