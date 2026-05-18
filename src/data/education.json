@@ -30,6 +30,13 @@
   ],
   "courses": [
     {
+      "id": "aws",
+      "title": "AWS Certified Cloud Practitioner",
+      "provider": "AWS",
+      "startDate": "May 2026",
+      "endDate": "May 2026"
+    },
+    {
       "id": "mckinsey",
       "title": "Forward Program",
       "provider": "McKinsey",
