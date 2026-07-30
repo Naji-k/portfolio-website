@@ -30,6 +30,13 @@
   ],
   "courses": [
     {
+      "id": "claude-code-action",
+      "title": "Claude Code in Action",
+      "provider": "Anthropic",
+      "startDate": "Jul 2026",
+      "endDate": "Jul 2026"
+    },
+    {
       "id": "aws",
       "title": "AWS Certified Cloud Practitioner",
       "provider": "AWS",
