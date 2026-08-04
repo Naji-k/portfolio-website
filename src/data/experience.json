@@ -25,12 +25,25 @@
     ]
   },
   {
+    "id": "ios-developer",
+    "title": "iOS Developer",
+    "company": "YoofLab",
+    "location": "Beirut",
+    "startDate": "Jul 2019",
+    "endDate": "Dec 2019",
+    "highlights": [
+      "Designed and developed an iOS application for a startup, focused on helping parents discover and register for children’s activities and community events.",
+      "Built core features including event tracking, event registration, calendar views, blog posts, photo galleries, and article viewing.",
+      "Collaborated with the team to translate product ideas into mobile features and improve the user experience through iterative development."
+    ]
+  },
+  {
     "id": "omnipharma-qa",
     "title": "Quality Assurance Officer",
     "company": "OMNIPHARMA",
     "location": "Beirut",
-    "startDate": "Jun 2015",
-    "endDate": "Sep 2019",
+    "startDate": "Jul 2015",
+    "endDate": "Jun 2019",
     "highlights": [
       "Submitted daily reports, addressed safety deviations, and led corrective actions across production lines.",
       "Developed an Excel automation tool using VBA that reduced data entry time by 70%."
