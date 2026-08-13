@@ -1,28 +1,28 @@
 {
   "name": "Naji Kanounji",
   "title": "Software Engineer",
-  "tagline": "I build backend systems, AI-enabled products, and tools that solve real problems.",
+  "tagline": "I keep finding the slowest, most manual part of a process — and figuring out how to make it disappear.",
   "location": "Amsterdam, Netherlands",
   "email": "me@nkanounji.com",
   "github": "https://github.com/naji-k",
-  "linkedin": "www.linkedin.com/in/najikanounji",
+  "linkedin": "https://www.linkedin.com/in/najikanounji",
   "photo": "images/profile.PNG",
-  "summary": "I’m a software engineer building backend systems, AI-powered workflows, and product-focused tools. At TomTom, I built an AI-powered feedback triage system, used across slack channels by 2,000+ users and reducing manual triage work by 80%. I also contributed to demo systems showcased at CES 2025.",
+  "summary": "I build backend systems and AI-powered products that replace manual work with something faster. At TomTom, I built an AI-powered Slack bot that triaged feedback for 2,000+ users and cut manual work by 80%, then owned the Developer Experience Demo system that ran live at CES 2025, getting promoted twice along the way. \n Right now I'm going deeper into AI agents and RAG, applying both hands-on into MatchBeforeApply, an open-source platform that scores CV-to-job fit before you apply.",
   "specialties": [
     {
       "icon": "terminal",
       "title": "Backend engineering",
-      "description": "APIs, backend services, and internal tools built with reliability, clarity, and maintainability in mind."
+      "description": "Backend services and internal tools — built to still be standing long after the demo's over."
     },
     {
       "icon": "sparkles",
       "title": "LLM product engineering",
-      "description": "LLM-backed features that parse, classify, compare, and structure information inside real software products."
+      "description": "AI features that actually do something: score a CV against a job, triage a Slack channel — not just answer a prompt."
     },
     {
       "icon": "lightbulb",
       "title": "Product-minded development",
-      "description": "Turning real problems into usable products — from internal tools at TomTom to MatchBeforeApply, an AI platform that helps candidates improve their job fit before applying."
+      "description": "From an internal tool at TomTom to MatchBeforeApply — same idea both times: build something people actually use."
     }
   ],
   "skills": {
