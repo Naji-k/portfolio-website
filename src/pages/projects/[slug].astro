@@ -15,11 +15,18 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 
 const meta = projects.find((p) => p.id === entry.id);
+const description = entry.data.description ?? meta?.description;
+
+// Cards are only generated for projects listed in projects.json; others fall back to the site card.
+const ogImage = meta ? `/og/${entry.id}.png` : undefined;
 ---
 
 <BaseLayout
   title={`${entry.data.title} — Naji Kanounji`}
-  description={entry.data.description ?? meta?.description}
+  description={description}
+  image={ogImage}
+  imageAlt={`${entry.data.title} — project by Naji Kanounji`}
+  ogType="article"
 >
   <!-- Back navigation -->
   <div
@@ -70,9 +77,9 @@ const meta = projects.find((p) => p.id === entry.id);
         {entry.data.title}
       </h1>
       {
-        (entry.data.description ?? meta?.description) && (
+        description && (
           <p class="text-lg leading-relaxed text-gray-500 dark:text-slate-400">
-            {entry.data.description ?? meta?.description}
+            {description}
           </p>
         )
       }
