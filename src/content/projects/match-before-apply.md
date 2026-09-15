@@ -67,7 +67,6 @@ multi-agent pipeline
 - Balancing simplicity and functionality when building for real-world use
 - Turning a personal problem into a scalable product concept
 
-
 ## Screenshots
 
 <div>
