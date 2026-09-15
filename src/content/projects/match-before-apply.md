@@ -18,6 +18,16 @@ Instead of relying on a single prompt, the system is designed using a
 multi-agent approach, where each component focuses on a specific task in the
 evaluation process.
 
+## Why I Built It
+
+This started during my own job search.
+
+Tracking applications was easy.  
+Knowing whether I was actually a good fit was not.
+
+Instead of just organizing applications,  
+I built a tool to **evaluate them first — and track them properly after.**
+
 ## Key Features
 
 - **Analyze and compare** CVs with job descriptions to generate a match score
@@ -57,15 +67,6 @@ multi-agent pipeline
 - Balancing simplicity and functionality when building for real-world use
 - Turning a personal problem into a scalable product concept
 
-## Why I Built It
-
-This started during my own job search.
-
-Tracking applications was easy.  
-Knowing whether I was actually a good fit was not.
-
-Instead of just organizing applications,  
-I built a tool to **evaluate them first — and track them properly after.**
 
 ## Screenshots
 

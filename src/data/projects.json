@@ -1,5 +1,21 @@
 [
   {
+    "id": "more-than-a-quiz",
+    "title": "The Quiz Game That Became More Than a Quiz",
+    "category": "personal",
+    "description": "A live quiz built for one camping trip — four teams answering from their phones, a shared screen as the scoreboard, and a host panel I ran the whole thing from.",
+    "tech": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Socket.IO",
+      "Tailwind CSS"
+    ],
+    "logo": null,
+    "hasDetail": true
+  },
+  {
     "id": "match-before-apply",
     "title": "Match Before Apply",
     "category": "personal",
