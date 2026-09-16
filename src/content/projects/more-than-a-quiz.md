@@ -85,6 +85,8 @@ wouldn't wipe four nights of scores.
     <div style="text-align: center; margin: 24px 0;font-weight: bold;">
       <p style="margin: 12px 0;">Map</p>
       <img src="/assets/projects/MoreThanAQuiz/map.jpg" alt="Map" />
+      <p style="margin: 12px 0;">Control Panel</p>
+      <img src="/assets/projects/MoreThanAQuiz/panel.png" alt="Game Board" style="width: 100%; height: auto;" />
       <p style="margin: 12px 0;">Game Board</p>
       <img src="/assets/projects/MoreThanAQuiz/game_board.png" alt="Game Board" style="width: 100%; height: auto;" />
       <!-- <p style="margin: 12px 0;">Preview</p>
