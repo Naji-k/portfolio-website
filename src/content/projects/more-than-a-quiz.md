@@ -22,31 +22,21 @@ nights. So I built the platform around the game instead.
 
 ## What I built
 
-Each team answered from one phone, playing as one of four competing empires —
-Romans, Vikings, Egyptians, and Samurai. I designed a shared map and physical
-cards around those teams too, so the game had an identity outside the screens. A
-shared screen showed the question, the timer, and the scores, and I ran
-everything from a host panel on my laptop. Questions ran in two formats so four
-nights wouldn't turn into the same fifteen minutes on repeat: one gave a single
-team first crack, with a steal phase opening if they missed; the other put all
-four teams on the clock at once, ranked by speed.
+Each team answered from one phone, playing as one of four competing empires: Romans, Vikings, Egyptians, and Samurai. I also designed a shared map and physical cards around them, so the game had an identity outside the screens.
 
-Each team could write their own defense questions in advance through a separate
-authenticated page, so I could quickly pull their set when another team attacked
-them. Between rounds, physical mini-games around the camp earned advantages like
-50/50, extra time, or the right to switch a question. Teams weren't just trying
-to know more answers — they were deciding which advantages to earn, which
-questions to save, and when a card was actually worth spending.
+A shared screen showed the question, timer, and scores, while I ran everything from a host panel on my laptop. Questions ran in two formats so four nights wouldn't turn into the same fifteen minutes on repeat: one gave a single team first crack, with a steal phase opening if they missed; the other put all four teams on the clock at once, ranked by speed.
+
+Each team could also prepare its own defense questions through a separate authenticated page, so I could quickly pull their set when another team attacked them.
+
+Because teams were writing their own questions, I needed a quick way to check them before they entered the game. I built a **review agent** that used Wikipedia as the shared reference source and returned a structured result for each submission: whether the question and answer held up, what was unclear, and a suggested correction when needed. I still made the final call before a question went live.
+
+Between rounds, physical mini-games around the camp earned advantages like 50/50, extra time, or the right to switch a question. Teams weren't just trying to know more answers, they were deciding which advantages to earn, which questions to save, and when a card was actually worth spending.
 
 ## Running it live
 
 Running this in front of a group is a different problem than running it alone.
-If a phone disconnected mid-round, the game couldn't stop while I debugged it.
 So the system ran on one rule: **the server owns the truth.** Phase, scores, the
-timer, who's allowed to answer — all of it lives on the server, and every screen
-just renders the same state. Each phone shows its own smooth countdown, but the
-server holds the deadline and measures response time, giving every device one
-authority for what actually happened.
+timer, who's allowed to answer all of it lives on the server, and every screen just renders the same state
 
 Reconnection was built in from the start: if a phone lost connection or
 refreshed, it could rejoin using a token stored on the device. If a team
@@ -80,6 +70,9 @@ wouldn't wipe four nights of scores.
       <img src="/assets/projects/MoreThanAQuiz/map.jpg" alt="Map" />
       <p style="margin: 12px 0;">Game Board</p>
       <img src="/assets/projects/MoreThanAQuiz/game_board.png" alt="Game Board" style="width: 100%; height: auto;" />
+      <!-- <p style="margin: 12px 0;">Preview</p>
+      <img src="/assets/projects/MoreThanAQuiz/preview.png" alt="Preview" style="width: 100%; height: auto;" /> -->
+      </p>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start;">
       <div>
         <p style="margin: 12px 0;">Game on Phone</p>
@@ -88,6 +81,22 @@ wouldn't wipe four nights of scores.
       <div>
         <p style="margin: 12px 0;">Add Question</p>
         <img src="/assets/projects/MoreThanAQuiz/add_question.png" alt="Add Question" style="width: 100%; height: auto;" />
+      </div>
+      <div>
+        <!-- <p style="margin: 12px 0;">Cards</p> -->
+        <img src="/assets/projects/MoreThanAQuiz/cards.png" alt="Cards" style="width: 100%; height: auto;" />
+      </div>
+      <div>
+        <!-- <p style="margin: 12px 0;">Cards</p> -->
+        <img src="/assets/projects/MoreThanAQuiz/cards-2.png" alt="Cards" style="width: 100%; height: auto;" />
+      </div>
+      <div>
+        <!-- <p style="margin: 12px 0;">Cards</p> -->
+        <img src="/assets/projects/MoreThanAQuiz/cards-3.png" alt="Cards" style="width: 100%; height: auto;" />
+      </div>
+      <div>
+        <!-- <p style="margin: 12px 0;">Cards</p> -->
+        <img src="/assets/projects/MoreThanAQuiz/cards-4.png" alt="Cards" style="width: 100%; height: auto;" />
       </div>
     </div>
 </div>
