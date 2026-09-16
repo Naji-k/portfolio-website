@@ -22,21 +22,38 @@ nights. So I built the platform around the game instead.
 
 ## What I built
 
-Each team answered from one phone, playing as one of four competing empires: Romans, Vikings, Egyptians, and Samurai. I also designed a shared map and physical cards around them, so the game had an identity outside the screens.
+Each team answered from one phone, playing as one of four competing empires:
+Romans, Vikings, Egyptians, and Samurai. I also designed a shared map and
+physical cards around them, so the game had an identity outside the screens.
 
-A shared screen showed the question, timer, and scores, while I ran everything from a host panel on my laptop. Questions ran in two formats so four nights wouldn't turn into the same fifteen minutes on repeat: one gave a single team first crack, with a steal phase opening if they missed; the other put all four teams on the clock at once, ranked by speed.
+A shared screen showed the question, timer, and scores, while I ran everything
+from a host panel on my laptop. Questions ran in two formats so four nights
+wouldn't turn into the same fifteen minutes on repeat: one gave a single team
+first crack, with a steal phase opening if they missed; the other put all four
+teams on the clock at once, ranked by speed.
 
-Each team could also prepare its own defense questions through a separate authenticated page, so I could quickly pull their set when another team attacked them.
+Each team could also prepare its own defense questions through a separate
+authenticated page, so I could quickly pull their set when another team attacked
+them.
 
-Because teams were writing their own questions, I needed a quick way to check them before they entered the game. I built a **review agent** that used Wikipedia as the shared reference source and returned a structured result for each submission: whether the question and answer held up, what was unclear, and a suggested correction when needed. I still made the final call before a question went live.
+Because teams were writing their own questions, I needed a quick way to check
+them before they entered the game. I built a **review agent** that used
+Wikipedia as the shared reference source and returned a structured result for
+each submission: whether the question and answer held up, what was unclear, and
+a suggested correction when needed. I still made the final call before a
+question went live.
 
-Between rounds, physical mini-games around the camp earned advantages like 50/50, extra time, or the right to switch a question. Teams weren't just trying to know more answers, they were deciding which advantages to earn, which questions to save, and when a card was actually worth spending.
+Between rounds, physical mini-games around the camp earned advantages like
+50/50, extra time, or the right to switch a question. Teams weren't just trying
+to know more answers, they were deciding which advantages to earn, which
+questions to save, and when a card was actually worth spending.
 
 ## Running it live
 
 Running this in front of a group is a different problem than running it alone.
 So the system ran on one rule: **the server owns the truth.** Phase, scores, the
-timer, who's allowed to answer all of it lives on the server, and every screen just renders the same state
+timer, who's allowed to answer all of it lives on the server, and every screen
+just renders the same state
 
 Reconnection was built in from the start: if a phone lost connection or
 refreshed, it could rejoin using a token stored on the device. If a team
