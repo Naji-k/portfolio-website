@@ -36,11 +36,18 @@ Each team could also prepare its own defense questions through a separate
 authenticated page, so I could quickly pull their set when another team attacked
 them.
 
-Because teams were writing their own questions, and I was preparing around 150 more myself, I needed a way to review the full set without manually checking 250 questions one by one.
-I used two agents. One turned a raw idea into a structured question with four options and a correct answer. The second reviewed every question before it entered the game, using Wikipedia as the shared reference source.
-That second step caught something I probably would have missed by skimming: the generator kept placing the correct answer in the first option. It flagged the pattern, so I reshuffled the set before the trip.
-It also caught questions that were technically close but too broad. For example, one asked who ruled Japan during the samurai era and answered “the shogun.” The reviewer marked it as mostly correct, but too general for the whole period.
-I still made the final call on every question.
+Because teams were writing their own questions, and I was preparing around 150
+more myself, I needed a way to review the full set without manually checking 250
+questions one by one. I used two agents. One turned a raw idea into a structured
+question with four options and a correct answer. The second reviewed every
+question before it entered the game, using Wikipedia as the shared reference
+source. That second step caught something I probably would have missed by
+skimming: the generator kept placing the correct answer in the first option. It
+flagged the pattern, so I reshuffled the set before the trip. It also caught
+questions that were technically close but too broad. For example, one asked who
+ruled Japan during the samurai era and answered “the shogun.” The reviewer
+marked it as mostly correct, but too general for the whole period. I still made
+the final call on every question.
 
 Between rounds, physical mini-games around the camp earned advantages like
 50/50, extra time, or the right to switch a question. Teams weren't just trying
